@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-function App() {
+import Home from './Pages/Home/Home'
+
+const App = () => {
   return (
     <div className="App">
-      <h1>Andi Dev</h1>
+      <Home />
     </div>
   )
 }
 
-export default App;
+export default App
