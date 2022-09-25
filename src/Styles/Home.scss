@@ -1,6 +1,7 @@
 .home {
-  background-color: aqua;
-  .title {
-    color: white;
+  display: flex;
+
+  .homeContainer {
+    flex: 5;
   }
 }
