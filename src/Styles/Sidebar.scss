@@ -1,5 +1,7 @@
 .sidebar {
-  flex: 1;
+  flex: 2;
+  min-height: 100vh;
+  background-color: whitesmoke;
 
   .top {
     background-color: #B131B5;
@@ -7,5 +9,79 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: .5px solid rgba($color: #000000, $alpha: .25);
+
+    .logo {
+      font-size: 20px;
+      font-weight: 500;
+      color: white;
+    }
+  }
+
+  .center {
+    margin-top: 10px;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+
+        &:nth-child(1), &:nth-last-child(1) {
+          margin: 0;
+        }
+        
+        span {
+          margin-left: 10px;
+        }
+
+        .icon {
+          color: #B131B5;
+        }
+
+        &:hover {
+          background-color: #B131B5;
+          color: white;
+          transition: 500ms;
+
+          .icon {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    background-color: #B131B5;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    span {
+      margin-right: 10px;
+      color: white;
+    }
+
+    .colorOption {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      border: 1px solid #B131B5;
+      margin: 5px;
+      cursor: pointer;
+
+      &:nth-child(2) { background-color: whitesmoke; }
+      &:nth-child(3) { background-color: darkblue; }
+      &:nth-child(4) { background-color: #333; }
+    }
   }
 }
