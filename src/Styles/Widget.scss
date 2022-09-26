@@ -18,7 +18,7 @@
 
     .title {
       font-weight: bold;
-      font-size: 14px;
+      font-size: 17px;
       color: gray;
     }
 
@@ -29,7 +29,7 @@
 
     .link {
       width: max-content;
-      font-size: 12px;
+      font-size: 16px;
       color: #B131B5;
       border-bottom: 1px solid #B131B5;
       cursor: pointer;
@@ -38,7 +38,7 @@
     .percentage {
       display: flex;
       align-items: center;
-      font-size: 14px;
+      font-size: 18px;
 
       &.positive {
         color: green;
@@ -49,7 +49,7 @@
     }
 
     .icon {
-      font-size: 30px;
+      font-size: 38px;
       padding: 5px;
       border-radius: 5px;
       align-self: flex-end;
