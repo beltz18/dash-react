@@ -7,7 +7,6 @@ import {
   Settings,
   ExitToApp,
   Splitscreen,
-  Palette
 } from '@mui/icons-material'
 
 function Sidebar() {
