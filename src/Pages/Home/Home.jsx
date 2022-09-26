@@ -1,7 +1,10 @@
 import '../../Styles/Home.scss'
-import Sidebar from '../../Components/Sidebar/Sidebar'
-import Navbar  from '../../Components/Navbar/Navbar'
-import Widget  from '../../Components/Widget/Widget'
+
+import Sidebar  from '../../Components/Sidebar/Sidebar'
+import Navbar   from '../../Components/Navbar/Navbar'
+import Widget   from '../../Components/Widget/Widget'
+import Features from '../../Components/Features/Features'
+import Chart    from '../../Components/Chart/Chart'
 
 const Home = () => {
   return (
@@ -14,6 +17,10 @@ const Home = () => {
           <Widget type="balance" cypher="positive" />
           <Widget type="project" cypher="negative" />
           <Widget type="worker"  cypher="positive" />
+        </div>
+        <div className="charts">
+          <Features />
+          <Chart />
         </div>
       </div>
     </div>
