@@ -1,7 +1,14 @@
 .home {
   display: flex;
+  background-color: whitesmoke;
 
   .homeContainer {
     flex: 10;
+
+    .widgets {
+      display: flex;
+      padding: 15px 25px;
+      gap: 20px;
+    }
   }
 }
