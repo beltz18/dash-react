@@ -1,4 +1,6 @@
 import '../../Styles/Sidebar.scss'
+import {useState} from 'react'
+import Dropdown from '../Dropdown/Dropdown'
 import {
   HomeRounded,
   AccountCircle,
@@ -10,6 +12,7 @@ import {
 } from '@mui/icons-material'
 
 function Sidebar() {
+  const [selected, setSelected] = useState("Choose One");
   return (
     <div className="sidebar">
       <div className='top'>
@@ -46,6 +49,7 @@ function Sidebar() {
             <span>Logout</span>
           </li>
         </ul>
+        <Dropdown selected={selected} setSelected={setSelected} />
       </div>
       <div className="bottom">
         <span>Theme</span>
