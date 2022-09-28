@@ -65,10 +65,19 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
+    z-index: 10000;
 
     span {
       margin-right: 10px;
       color: white;
+    }
+
+    &.hide {
+      display: none;
+    }
+
+    &.show {
+      display: all;
     }
 
     .colorOption {

@@ -51,7 +51,7 @@ function Sidebar() {
         </ul>
         <Dropdown selected={selected} setSelected={setSelected} />
       </div>
-      <div className="bottom">
+      <div className="bottom hide">
         <span>Theme</span>
         <div className="colorOption" title='Light'></div>
         <div className="colorOption" title='Blue'></div>

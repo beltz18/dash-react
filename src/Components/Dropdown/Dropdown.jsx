@@ -1,10 +1,7 @@
 import {useState} from 'react'
-
 import {
-    KeyboardArrowUp,
-    KeyboardArrowDown,
-  } from "@mui/icons-material"
-
+  KeyboardArrowDown,
+} from "@mui/icons-material"
 import '../../Styles/Dropdown.scss'
 
 function Dropdown({ selected, setSelected }) {
@@ -12,7 +9,7 @@ function Dropdown({ selected, setSelected }) {
   const options = ["React", "Vue", "Angular"];
   return (
     <div className="dropdown">
-      <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
+      <div className="dropdown-btn" onClick={() => setIsActive(!isActive)}>
         {selected}
         <span><KeyboardArrowDown/></span>
       </div>
@@ -20,7 +17,7 @@ function Dropdown({ selected, setSelected }) {
         <div className="dropdown-content">
           {options.map((option) => (
             <div
-              onClick={(e) => {
+              onClick={() => {
                 setSelected(option);
                 setIsActive(false);
               }}
@@ -32,7 +29,7 @@ function Dropdown({ selected, setSelected }) {
         </div>
       )}
     </div>
-  );
+  )
 }
 
 export default Dropdown
