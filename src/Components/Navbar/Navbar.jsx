@@ -35,6 +35,7 @@ function Navbar() {
           <div className="item" title='Profile'>
             <img src={ avatar } alt="Avatar" className='avatar' />
           </div>
+         
         </div>
       </div>
     </div>
