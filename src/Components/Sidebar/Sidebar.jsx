@@ -12,7 +12,7 @@ import {
 } from '@mui/icons-material'
 
 function Sidebar() {
-  const [selected, setSelected] = useState("Choose One");
+  const [selected, setSelected] = useState("Profile");
   return (
     <div className="sidebar">
       <div className='top'>
@@ -48,8 +48,18 @@ function Sidebar() {
             <ExitToApp className='icon' />
             <span>Logout</span>
           </li>
+          <li>
+            <AccountCircle className='icon' />
+            <Dropdown selected={selected} setSelected={setSelected} />
+          </li>
+          <li>
+            <AccountCircle className='icon' />
+            <Dropdown selected={selected} setSelected={setSelected} />
+          </li>
+
         </ul>
-        <Dropdown selected={selected} setSelected={setSelected} />
+        
+      
       </div>
       <div className="bottom hide">
         <span>Theme</span>

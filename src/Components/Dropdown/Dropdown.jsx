@@ -6,7 +6,7 @@ import '../../Styles/Dropdown.scss'
 
 function Dropdown({ selected, setSelected }) {
   const [isActive, setIsActive] = useState(false);
-  const options = ["React", "Vue", "Angular"];
+  const profileOptions = ["Account,Check in and Check out", "Appearance", "Change Password", "Profile", "Access Rights"];
   return (
     <div className="dropdown">
       <div className="dropdown-btn" onClick={() => setIsActive(!isActive)}>
@@ -15,7 +15,7 @@ function Dropdown({ selected, setSelected }) {
       </div>
       {isActive && (
         <div className="dropdown-content">
-          {options.map((option) => (
+          {profileOptions.map((option) => (
             <div
               onClick={() => {
                 setSelected(option);
