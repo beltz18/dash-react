@@ -1,4 +1,5 @@
 import '../../Styles/Navbar.scss'
+import { useState } from 'react'
 import {
   Search,
   Language,
@@ -9,6 +10,30 @@ import {
 import avatar from '../../Resources/img/avatar.jpg'
 
 function Navbar() {
+  const [click,setClick] = useState(false)
+
+  const tick = () => {
+    click === true ? setClick(false) : setClick(true)
+    let t  = document.querySelector('.theme_bottom')
+    let u  = [...t.classList]
+    let c1 = (element) => element === 'hide'
+    let c2 = (element) => element === 'show'
+    if (u.some(c1) === true) {
+      t.classList.remove('none')
+      t.classList.remove('hide')
+      t.classList.add('show')
+    } else if(u.some(c2) === true) {
+      t.classList.remove('show')
+      t.classList.add('hide')
+      setTimeout(() => {
+        t.classList.add('none')
+      }, 900)
+    } else {
+      t.classList.remove('none')
+      t.classList.add('show')
+    }
+  }
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -22,7 +47,7 @@ function Navbar() {
             <span>English</span>
           </div>
           <div className="item" title='Theme Color'>
-            <Palette className='icon' />
+            <Palette className='icon' onClick={tick} />
           </div>
           <div className="item" title='Messages'>
             <ChatBubble className='icon' />

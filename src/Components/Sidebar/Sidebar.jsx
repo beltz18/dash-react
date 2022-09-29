@@ -56,12 +56,9 @@ function Sidebar() {
             <AccountCircle className='icon' />
             <Dropdown selected={selected} setSelected={setSelected} />
           </li>
-
         </ul>
-        
-      
       </div>
-      <div className="bottom hide">
+      <div className="bottom none theme_bottom">
         <span>Theme</span>
         <div className="colorOption" title='Light'></div>
         <div className="colorOption" title='Blue'></div>
