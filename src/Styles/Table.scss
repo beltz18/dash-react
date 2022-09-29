@@ -1,3 +1,19 @@
 .table {
-  
+  .status {
+    padding: 2px 5px;
+    border-radius: 3px;
+    
+    &.approved {
+      background-color: green;
+      color: white;
+    }
+    &.pending {
+      background-color: yellow;
+      color: black;
+    }
+    &.denied {
+      background-color: red;
+      color: white;
+    }
+  }
 }
