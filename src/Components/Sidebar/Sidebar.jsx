@@ -1,6 +1,7 @@
 import '../../Styles/Sidebar.scss'
-import {useState} from 'react'
-import Dropdown from '../Dropdown/Dropdown'
+import {useState}  from 'react'
+import { Link }    from 'react-router-dom';
+// import Dropdown from '../Dropdown/Dropdown'
 import {
   HomeRounded,
   AccountCircle,
@@ -22,42 +23,60 @@ function Sidebar() {
       </div>
       <div className='center'>
         <ul>
-          <li>
-            <HomeRounded className='icon' />
-            <span>Home</span>
-          </li>
-          <li>
-            <CakeOutlined className='icon' />
-            <span>Projects</span>
-          </li>
-          <li>
-            <Splitscreen className='icon' />
-            <span>Tasks</span>
-          </li>
-          <li>
-            <AccountCircle className='icon' />
-            <span>Profile</span>
-          </li>
-          <li>
-            <Person3Outlined className='icon' />
-            <span>Workers</span>
-          </li>
-          <li>
-            <CalendarMonth className='icon' />
-            <span>Calendar</span>
-          </li>
-          <li>
-            <Cake className='icon' />
-            <span>Battleground</span>
-          </li>
-          <li>
-            <Settings className='icon' />
-            <span>Settings</span>
-          </li>
-          <li>
-            <ExitToApp className='icon' />
-            <span>Logout</span>
-          </li>
+          <Link to={"/"} className="link">
+            <li>
+              <HomeRounded className='icon' />
+              <span>Home</span>
+            </li>
+          </Link>
+          <Link to={"/"} className="link">
+            <li>
+              <CakeOutlined className='icon' />
+              <span>Projects</span>
+            </li>
+          </Link>
+          <Link to={"/"} className="link">
+            <li>
+              <Splitscreen className='icon' />
+              <span>Tasks</span>
+            </li>
+          </Link>
+          <Link to={"/profile"} className="link">
+            <li>
+              <AccountCircle className='icon' />
+              <span>Profile</span>
+            </li>
+          </Link>
+          <Link to={"/user"} className="link">
+            <li>
+              <Person3Outlined className='icon' />
+              <span>Workers</span>
+            </li>
+          </Link>
+          <Link to={"/"} className="link">
+            <li>
+              <CalendarMonth className='icon' />
+              <span>Calendar</span>
+            </li>
+          </Link>
+          <Link to={"/"} className="link">
+            <li>
+              <Cake className='icon' />
+              <span>Battleground</span>
+            </li>
+          </Link>
+          <Link to={"/"} className="link">
+            <li>
+              <Settings className='icon' />
+              <span>Settings</span>
+            </li>
+          </Link>
+          <Link to={"/"} className="link">
+            <li>
+              <ExitToApp className='icon' />
+              <span>Logout</span>
+            </li>
+          </Link>
           {/* <li>
             <AccountCircle className='icon' />
             <Dropdown selected={selected} setSelected={setSelected} />

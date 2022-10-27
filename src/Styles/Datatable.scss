@@ -1,7 +1,10 @@
 .datatable {
   height: 500px;
   padding: 20px;
-  background-color: whitesmoke;
+
+  .userTitle {
+    margin-bottom: 10px;
+  }
 
   span {
     color: white;
@@ -40,5 +43,9 @@
       background-color: rgb(220,20,60,.15);
       cursor: pointer;
     }
+  }
+
+  .Datatable {
+    background-color: white;
   }
 }

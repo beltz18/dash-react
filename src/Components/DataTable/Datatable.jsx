@@ -59,12 +59,14 @@ const rows = [
 function Datatable() {
   return (
     <div className="datatable">
+      <h1 className="userTitle">Users</h1>
       <DataGrid
         rows={rows}
         columns={columns}
         pageSize={8}
         rowsPerPageOptions={[8]}
         checkboxSelection
+        className="Datatable"
       />
     </div>
   )

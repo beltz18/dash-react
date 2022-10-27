@@ -16,13 +16,13 @@ const App = () => {
       <Router>
         <Routes>
           <Route path='/'>
-            <Route index           element={ <Home /> } />
+            <Route index           element={ <Home /> }     />
             <Route path='calendar' element={ <Calendar /> } />
-            <Route path='profile'  element={ <Profile /> } />
-            <Route path='new'      element={ <New /> } />
+            <Route path='profile'  element={ <Profile /> }  />
+            <Route path='new'      element={ <New /> }      />
             <Route path='user'>
-              <Route index         element={ <List /> } />
-              <Route path=':sin'   element={ <Single /> } />
+              <Route index         element={ <List /> }     />
+              <Route path=':sin'   element={ <Single /> }   />
             </Route>
           </Route>
         </Routes>
