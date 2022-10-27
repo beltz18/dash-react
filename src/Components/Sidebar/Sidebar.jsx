@@ -9,6 +9,8 @@ import {
   Settings,
   ExitToApp,
   Splitscreen,
+  CakeOutlined,
+  Person3Outlined,
 } from '@mui/icons-material'
 
 function Sidebar() {
@@ -25,12 +27,20 @@ function Sidebar() {
             <span>Home</span>
           </li>
           <li>
+            <CakeOutlined className='icon' />
+            <span>Projects</span>
+          </li>
+          <li>
             <Splitscreen className='icon' />
             <span>Tasks</span>
           </li>
           <li>
             <AccountCircle className='icon' />
             <span>Profile</span>
+          </li>
+          <li>
+            <Person3Outlined className='icon' />
+            <span>Workers</span>
           </li>
           <li>
             <CalendarMonth className='icon' />
@@ -48,14 +58,14 @@ function Sidebar() {
             <ExitToApp className='icon' />
             <span>Logout</span>
           </li>
-          <li>
+          {/* <li>
             <AccountCircle className='icon' />
             <Dropdown selected={selected} setSelected={setSelected} />
           </li>
           <li>
             <AccountCircle className='icon' />
             <Dropdown selected={selected} setSelected={setSelected} />
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className="bottom none theme_bottom">

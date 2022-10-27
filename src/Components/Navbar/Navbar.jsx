@@ -58,9 +58,9 @@ function Navbar() {
             <div className="counter"></div>
           </div>
           <div className="item" title='Profile'>
+            <h5 className='name'>Andi</h5>
             <img src={ avatar } alt="Avatar" className='avatar' />
           </div>
-         
         </div>
       </div>
     </div>
