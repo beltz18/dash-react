@@ -10,3 +10,10 @@ export const clearUser = () => {
     type: 'SIGN_OUT'
   }
 }
+
+export const setUsers = (users) => {
+  return {
+    type: 'LOAD',
+    users
+  }
+}

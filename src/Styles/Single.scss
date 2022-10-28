@@ -4,6 +4,7 @@
 
   .singleContainer {
     flex: 10;
+    background-color: whitesmoke;
 
     .top {
       padding: 20px;
@@ -16,6 +17,7 @@
         box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
         padding: 20px;
         position: relative;
+        background-color: white;
 
         .edit {
           position: absolute;
@@ -72,6 +74,7 @@
         -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
         box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
         padding: 20px;
+        background-color: white;
       }
     }
   }

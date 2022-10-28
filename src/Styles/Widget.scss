@@ -27,12 +27,16 @@
       font-weight: 300;
     }
 
-    .link {
+    span.link {
       width: max-content;
       font-size: 16px;
       color: #B131B5;
       border-bottom: 1px solid #B131B5;
       cursor: pointer;
+    }
+
+    .link {
+      text-decoration: none;
     }
 
     .percentage {

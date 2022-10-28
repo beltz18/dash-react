@@ -13,10 +13,20 @@ function userReducer(state=null,action) {
   }
 }
 
+function usersReducer(state=null,action) {
+  switch (action.type) {
+    case 'LOAD':
+      return action.users
+  
+    default:
+      return state
+  }
+}
+
 let myReducer = combineReducers({
-  user: userReducer
+  user: userReducer,
+  users: usersReducer
 })
 
 let store = createStore(myReducer)
-
 export default store

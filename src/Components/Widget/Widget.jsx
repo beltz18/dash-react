@@ -7,6 +7,7 @@ import {
   BusinessCenterRounded,
   GroupRounded,
 } from "@mui/icons-material"
+import { Link } from "react-router-dom"
 
 const Widget = ({ type, cypher }) => {
   let data
@@ -79,6 +80,7 @@ const Widget = ({ type, cypher }) => {
         value: 156,
         percentage: 8,
         link: "Your workers",
+        a: "/user",
         icon1: <GroupRounded
                   className="icon"
                   sx={{
@@ -102,7 +104,9 @@ const Widget = ({ type, cypher }) => {
       <div className="left">
         <span className="title">{ data.title }</span>
         <span className="counter">{ data.isMoney && '$' } { data.value }</span>
-        <span className="link">{  data.link }</span>
+        <Link to={data.a} className="link">
+          <span className="link">{ data.link }</span>
+        </Link>
       </div>
       <div className="right">
         <div className={"percentage "+cypher}>
