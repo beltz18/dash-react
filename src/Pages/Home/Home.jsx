@@ -18,6 +18,7 @@ const Home = () => {
   .then((res) => {
     if (res.data) {
       const arr  = res.data
+      const me   = store.getState().user.email
       const rows = []
       for (let i = 0; i < arr.length; i++) {
         let rand1      = Math.round(Math.random()*100)
@@ -30,7 +31,9 @@ const Home = () => {
           hours: rand2,
           status: "online"
         }
-        rows.push(obj)
+        if (arr[i].email != me) {
+          rows.push(obj)
+        }
       }
       store.dispatch(setUsers(rows))
     }

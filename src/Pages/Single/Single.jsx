@@ -1,8 +1,24 @@
 import "../../Styles/Single.scss"
+import {
+  useParams
+} from "react-router-dom"
+
+import store   from "../../app/redux/store"
 import Sidebar from "../../Components/Sidebar/Sidebar"
 import Navbar  from "../../Components/Navbar/Navbar"
 
 function Single() {
+  const { sin } = useParams()
+  const users   = store.getState().users
+  const tuser   = {}
+
+  users.forEach(element => {
+    if(element.id === sin) {
+      tuser['name'] = element.name
+      tuser['email'] = element.email
+    }
+  })
+
   return (
     <div className="single">
       <Sidebar />
@@ -19,11 +35,11 @@ function Single() {
                 className="imgItem"
               />
               <div className="details">
-                <h1 className="itemTitle">Jhon Doe</h1>
+                <h1 className="itemTitle">{tuser.name}</h1>
                 <h5 className="a">Employee</h5>
                 <div className="detailItem">
                   <span className="itemKey">Email:</span>
-                  <span className="itemValue">jhondoe@gmail.com</span>
+                  <span className="itemValue">{tuser.email}</span>
                 </div>
                 <div className="detailItem">
                   <span className="itemKey">Phone:</span>
