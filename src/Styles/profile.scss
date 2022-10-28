@@ -1,6 +1,9 @@
 .profile {
-  background-color: #B131B5;
-  .title {
-    color: white;
+  display: flex;
+  width: 100%;
+
+  .profileContainer {
+    flex: 10;
+    background-color: whitesmoke;
   }
 }

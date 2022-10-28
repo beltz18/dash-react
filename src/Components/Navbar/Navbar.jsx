@@ -1,5 +1,6 @@
 import '../../Styles/Navbar.scss'
 import { useState } from 'react'
+import store from '../../app/redux/store'
 import {
   Search,
   Language,
@@ -11,6 +12,7 @@ import avatar from '../../Resources/img/avatar.jpg'
 
 function Navbar() {
   const [click,setClick] = useState(false)
+  const [user, setUser]  = useState(store.getState().user)
 
   const tick = () => {
     click === true ? setClick(false) : setClick(true)
@@ -58,7 +60,7 @@ function Navbar() {
             <div className="counter"></div>
           </div>
           <div className="item" title='Profile'>
-            <h5 className='name'>Andi</h5>
+            <h5 className='name'>{user.name}</h5>
             <img src={ avatar } alt="Avatar" className='avatar' />
           </div>
         </div>
