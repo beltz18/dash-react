@@ -1,5 +1,5 @@
 import '../../Styles/Sidebar.scss'
-import {useState}  from 'react'
+// import {useState}  from 'react'
 import { Link }    from 'react-router-dom';
 // import Dropdown from '../Dropdown/Dropdown'
 import {
@@ -12,10 +12,11 @@ import {
   Splitscreen,
   CakeOutlined,
   Person3Outlined,
+  Payment,
 } from '@mui/icons-material'
 
 function Sidebar() {
-  const [selected, setSelected] = useState("Profile");
+  // const [selected, setSelected] = useState("Profile");
   return (
     <div className="sidebar">
       <div className='top'>
@@ -51,6 +52,12 @@ function Sidebar() {
             <li>
               <Person3Outlined className='icon' />
               <span>Workers</span>
+            </li>
+          </Link>
+          <Link to={"/payroll"} className="link">
+            <li>
+              <Payment className='icon' />
+              <span>Payroll</span>
             </li>
           </Link>
           <Link to={"/"} className="link">

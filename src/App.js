@@ -11,6 +11,7 @@ import List       from './Pages/List/List'
 import Single     from './Pages/Single/Single'
 import NotFound   from './Pages/404/NotFound'
 import Loading    from './Pages/Loading/Loading'
+import Payroll    from './Pages/Payroll/Payroll'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             <Route path='calendar' element={ <Calendar /> } />
             <Route path='profile'  element={ <Profile /> }  />
             <Route path='new'      element={ <New /> }      />
+            <Route path='payroll'  element={ <Payroll /> }  />
             <Route path='user'>
               <Route index         element={ <List /> }     />
               <Route path=':sin'   element={ <Single /> }   />

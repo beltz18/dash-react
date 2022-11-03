@@ -6,6 +6,7 @@ import {
 import store   from "../../app/redux/store"
 import Sidebar from "../../Components/Sidebar/Sidebar"
 import Navbar  from "../../Components/Navbar/Navbar"
+import Map     from "../../app/map/component/map/Map"
 
 function Single() {
   const { sin } = useParams()
@@ -26,7 +27,6 @@ function Single() {
         <Navbar />
         <div className="top">
           <div className="left">
-            <div className="edit">Edit</div>
             <h1 className="title">Information</h1>
             <div className="item">
               <img
@@ -57,7 +57,7 @@ function Single() {
             </div>
           </div>
           <div className="right">
-            <h1>Map</h1>
+            <Map />
           </div>
         </div>
         <div className="bottom"></div>

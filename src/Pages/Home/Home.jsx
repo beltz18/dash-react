@@ -31,7 +31,7 @@ const Home = () => {
           hours: rand2,
           status: "online"
         }
-        if (arr[i].email != me) {
+        if (arr[i].email !== me) {
           rows.push(obj)
         }
       }

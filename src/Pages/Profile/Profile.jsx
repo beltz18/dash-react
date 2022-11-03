@@ -2,6 +2,7 @@ import '../../Styles/profile.scss'
 import store   from '../../app/redux/store'
 import Sidebar from '../../Components/Sidebar/Sidebar'
 import Navbar  from '../../Components/Navbar/Navbar'
+import Map     from '../../app/map/component/map/Map'
 
 const Profile = () => {
   const me = store.getState().user
@@ -44,7 +45,7 @@ const Profile = () => {
             </div>
           </div>
           <div className="right">
-            <h1>Map</h1>
+            <Map />
           </div>
         </div>
         <div className="bottom"></div>

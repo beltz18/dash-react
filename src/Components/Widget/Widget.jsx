@@ -77,7 +77,7 @@ const Widget = ({ type, cypher }) => {
       data = {
         title: "Workers",
         isMoney: false,
-        value: 156,
+        value: 2,
         percentage: 8,
         link: "Your workers",
         a: "/user",
