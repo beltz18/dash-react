@@ -2,10 +2,11 @@ import "../../Styles/Payroll.scss"
 import Sidebar   from "../../Components/Sidebar/Sidebar"
 import Navbar    from "../../Components/Navbar/Navbar"
 import Datatable from "../../Components/DataTable/Datatable"
-import { Link }  from "react-router-dom"
+import MyModal   from "../../Components/Modal/Modal"
 import {
-  Create,
-  Visibility,
+  Button
+} from "@mui/material"
+import {
   Delete
 } from '@mui/icons-material'
 
@@ -24,19 +25,16 @@ const columns = [
   },
   {
     field: 'action',   headerName: 'Action',    width: 200,
-    renderCell: (data) => {
+    renderCell: () => {
       return (
         <div className="cellAction">
-          <Link to={`/user/${data.row.id}`}>
-            <div className="seeButton">
-              <Visibility />
-            </div>
-          </Link>
-          <div className="updateButton">
-            <Create />
+          <div className="seeButton">
+            <MyModal />
           </div>
           <div className="deleteButton">
-            <Delete />
+            <Button sx={{color: "crimson", p: 0}}>
+              <Delete />
+            </Button>
           </div>
         </div>
       )
@@ -55,8 +53,8 @@ function Payroll() {
       <div className="payrollContainer">
         <Navbar />
         <div className="container">
-          <Datatable columns={columns} rows={rows} />
           Payroll
+          <Datatable columns={columns} rows={rows} />
         </div>
       </div>
     </div>
