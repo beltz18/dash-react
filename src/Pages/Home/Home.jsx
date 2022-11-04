@@ -1,17 +1,15 @@
 import '../../Styles/Home.scss'
-
-import {
-  setUsers
-} from '../../app/redux/action'
-import store from '../../app/redux/store'
-import axios from 'axios'
-
-import Sidebar  from '../../Components/Sidebar/Sidebar'
-import Navbar   from '../../Components/Navbar/Navbar'
-import Widget   from '../../Components/Widget/Widget'
-import Features from '../../Components/Features/Features'
-import Chart    from '../../Components/Chart/Chart'
-import Table    from '../../Components/Table/Table'
+import axios           from 'axios'
+import addNotification from 'react-push-notification'
+import logo            from '../../Resources/img/wamc.png'
+import { setUsers }    from '../../app/redux/action'
+import store           from '../../app/redux/store'
+import Sidebar         from '../../Components/Sidebar/Sidebar'
+import Navbar          from '../../Components/Navbar/Navbar'
+import Widget          from '../../Components/Widget/Widget'
+import Features        from '../../Components/Features/Features'
+import Chart           from '../../Components/Chart/Chart'
+import Table           from '../../Components/Table/Table'
 
 const Home = () => {
   axios.get('http://localhost:5000/select/all')
@@ -42,8 +40,22 @@ const Home = () => {
     console.log(err)
   })
 
+  const notification = () => {
+    addNotification({
+      title: "Welcome",
+      message: "Hello World",
+      duration: 5000,
+      icon: logo,
+      native: true,
+      onClick: () => {
+        console.log("Hello Push Notif")
+      }
+    })
+  }
+
   return (
     <div className="home">
+      {notification()}
       <Sidebar />
       <div className="homeContainer">
         <Navbar />
