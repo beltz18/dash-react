@@ -2,8 +2,27 @@
   height: 500px;
   padding: 20px;
 
-  .userTitle {
-    margin-bottom: 10px;
+  .contHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .userTitle {
+      margin-bottom: 10px;
+    }
+
+    .new {
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      background-color: #B131B5;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   }
 
   span {

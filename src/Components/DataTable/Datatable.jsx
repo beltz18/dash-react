@@ -4,7 +4,10 @@ import { DataGrid } from "@mui/x-data-grid"
 function Datatable({rows,columns}) {
   return (
     <div className="datatable">
-      <h1 className="userTitle">Employees</h1>
+      <div className="contHead">
+        <h1 className="userTitle">Employees</h1>
+        <button className="new">New</button>
+      </div>
       <DataGrid
         rows={rows}
         columns={columns}
