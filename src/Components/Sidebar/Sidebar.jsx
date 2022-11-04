@@ -78,12 +78,11 @@ function Sidebar() {
               <span>Settings</span>
             </li>
           </Link>
-          <Link to={"/"} className="link">
-            <li>
+            <li onClick={() => {window.location="http://localhost:3001"}}>
+              
               <ExitToApp className='icon' />
               <span>Logout</span>
             </li>
-          </Link>
           {/* <li>
             <AccountCircle className='icon' />
             <Dropdown selected={selected} setSelected={setSelected} />

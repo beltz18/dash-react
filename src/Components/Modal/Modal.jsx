@@ -6,8 +6,7 @@ import {
   Backdrop,
 } from "@mui/material"
 import {
-  Visibility,
-  Delete
+  Visibility
 } from '@mui/icons-material'
 
 const columns = [
@@ -20,12 +19,12 @@ const columns = [
 ]
 
 const rows = [
-  {id: 1, company: "Biz Rescue Pro",  amount: 3500,    asset: "CAD", concept: "Monthly", date: "10-18-2022"},
-  {id: 2, company: "Amigo Workforce", amount: 3500,    asset: "CAD", concept: "Monthly", date: "10-18-2022"},
-  {id: 3, company: "Amigo Workforce", amount: 3500,    asset: "USD", concept: "Monthly", date: "10-18-2022"},
-  {id: 4, company: "Biz Rescue Pro",  amount: 3500,    asset: "CAD", concept: "Monthly", date: "10-18-2022"},
-  {id: 5, company: "Biz Rescue Pro",  amount: 3500000, asset: "COP", concept: "Monthly", date: "10-18-2022"},
-  {id: 6, company: "Biz Rescue Pro",  amount: 3500,    asset: "CAD", concept: "Monthly", date: "10-18-2022"},
+  {id: 1, company: "Biz Rescue Pro",  amount: 3500,    asset: "CAD", concept: "Monthly", date: "11-04-2022"},
+  {id: 2, company: "Amigo Workforce", amount: 3500,    asset: "CAD", concept: "Monthly", date: "11-04-2022"},
+  {id: 3, company: "Amigo Workforce", amount: 3500,    asset: "USD", concept: "Monthly", date: "11-04-2022"},
+  {id: 4, company: "Biz Rescue Pro",  amount: 3500,    asset: "CAD", concept: "Monthly", date: "11-04-2022"},
+  {id: 5, company: "Biz Rescue Pro",  amount: 3500000, asset: "COP", concept: "Monthly", date: "11-04-2022"},
+  {id: 6, company: "Biz Rescue Pro",  amount: 3500,    asset: "CAD", concept: "Monthly", date: "11-04-2022"},
 ]
 
 function MyModal() {
