@@ -1,5 +1,6 @@
 import '../../Styles/FormModal.scss'
 import { useState } from "react"
+import axios        from "axios"
 import {
   Modal,
   Box,
@@ -22,6 +23,26 @@ function FormPay ({children}) {
   const handleOpen      = () => setOpen(true)
   const handleClose     = () => setOpen(false)
 
+  const getData = () => {
+    let user        = document.querySelector("#user")
+    let id          = document.querySelector("#id")
+    let method      = document.querySelector("#method")
+    let company     = document.querySelector("#company")
+    let amount      = document.querySelector("#amount")
+    let asset       = document.querySelector("#asset")
+    let transaction = {
+      id:      id.value,
+      method:  method.value,
+      email:   user.value,
+      company: company.value,
+      amount:  amount.value,
+      asset:   asset.value
+    }
+    console.log(transaction)
+    axios.post("http://localhost:4000/register/payment", {transaction})
+    alert("Payment registered")
+  }
+
   return (
     <div>
       <button className="new" onClick={handleOpen}>Pay</button>
@@ -38,17 +59,17 @@ function FormPay ({children}) {
         <Box sx={style}>
           <form>
             <h1>New Payment</h1>
-            <select className="regForm">
+            <select id='user' className="regForm">
               <option value="anmdev32@gmail.com">Andi Montilla</option>
               <option value="beltz.18kyodai@gmail.com">Beltz Ahnxton</option>
               <option value="tidvafj@gmail.com">TIDV Tech</option>
             </select>
-            <input type="text"   placeholder="Transaction ID" className="regForm" />
-            <input type="text"   placeholder="Method"         className="regForm" />
-            <input type="text"   placeholder="Company"        className="regForm" />
-            <input type="number" placeholder="Amount"         className="regForm" />
-            <input type="text"   placeholder="Asset"          className="regForm" />
-            <input type="button" value="Register" className="regForm" />
+            <input type="text"   id='id'      placeholder="Transaction ID" className="regForm" />
+            <input type="text"   id='method'  placeholder="Method"         className="regForm" />
+            <input type="text"   id='company' placeholder="Company"        className="regForm" />
+            <input type="number" id='amount'  placeholder="Amount"         className="regForm" />
+            <input type="text"   id='asset'   placeholder="Asset"          className="regForm" />
+            <input type="button" value="Register" onClick={getData}        className="regForm" />
           </form>
         </Box>
       </Modal>

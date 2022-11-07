@@ -44,7 +44,9 @@ const columns = [
 ]
 
 const rows = [
-  {id: 1, name: "Beltz Anhxton", salary: 7000, asset: "CAD", status: "active"}
+  {id: 2, name: "Andi Montilla", salary: 7000, asset: "USD", status: "active"},
+  {id: 1, name: "Beltz Anhxton", salary: 2500, asset: "CAD", status: "active"},
+  {id: 3, name: "TIDV Tech",     salary: 1000, asset: "CAD", status: "active"}
 ]
 
 function Payroll() {
