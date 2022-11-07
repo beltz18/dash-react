@@ -1,6 +1,8 @@
 import '../../Styles/FormModal.scss'
 import { useState } from "react"
 import axios        from "axios"
+import { setTransactions } from '../../app/redux/action'
+import store from '../../app/redux/store'
 import {
   Modal,
   Box,
@@ -23,6 +25,17 @@ function FormPay ({children}) {
   const handleOpen      = () => setOpen(true)
   const handleClose     = () => setOpen(false)
 
+  axios.get('http://localhost:5000/select/transactions')
+  .then((res) => {
+    if (res.data) {
+      const dataT = res.data
+      store.dispatch(setTransactions(dataT))
+    }
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+
   const getData = () => {
     let user        = document.querySelector("#user")
     let id          = document.querySelector("#id")
@@ -30,17 +43,21 @@ function FormPay ({children}) {
     let company     = document.querySelector("#company")
     let amount      = document.querySelector("#amount")
     let asset       = document.querySelector("#asset")
+    let concept     = document.querySelector("#concept")
+
     let transaction = {
       id:      id.value,
       method:  method.value,
       email:   user.value,
       company: company.value,
       amount:  amount.value,
-      asset:   asset.value
+      asset:   asset.value,
+      concept: concept.value
     }
     console.log(transaction)
     axios.post("http://localhost:4000/register/payment", {transaction})
     alert("Payment registered")
+    handleClose()
   }
 
   return (
@@ -69,6 +86,7 @@ function FormPay ({children}) {
             <input type="text"   id='company' placeholder="Company"        className="regForm" />
             <input type="number" id='amount'  placeholder="Amount"         className="regForm" />
             <input type="text"   id='asset'   placeholder="Asset"          className="regForm" />
+            <input type="text"   id='concept' placeholder="Concept"        className="regForm" />
             <input type="button" value="Register" onClick={getData}        className="regForm" />
           </form>
         </Box>

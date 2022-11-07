@@ -2,7 +2,6 @@ import '../../Styles/Home.scss'
 import axios           from 'axios'
 import addNotification from 'react-push-notification'
 import logo            from '../../Resources/img/wamc.png'
-import { setUsers }    from '../../app/redux/action'
 import store           from '../../app/redux/store'
 import Sidebar         from '../../Components/Sidebar/Sidebar'
 import Navbar          from '../../Components/Navbar/Navbar'
@@ -10,6 +9,10 @@ import Widget          from '../../Components/Widget/Widget'
 import Features        from '../../Components/Features/Features'
 import Chart           from '../../Components/Chart/Chart'
 import Table           from '../../Components/Table/Table'
+import {
+  setUsers,
+  setTransactions
+} from '../../app/redux/action'
 
 const Home = () => {
   axios.get('http://localhost:5000/select/all')
@@ -34,6 +37,17 @@ const Home = () => {
         }
       }
       store.dispatch(setUsers(rows))
+    }
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+
+  axios.get('http://localhost:5000/select/transactions')
+  .then((res) => {
+    if (res.data) {
+      const dataT = res.data
+      store.dispatch(setTransactions(dataT))
     }
   })
   .catch((err) => {

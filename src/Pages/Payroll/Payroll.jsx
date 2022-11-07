@@ -26,7 +26,7 @@ const columns = [
   },
   {
     field: 'action',   headerName: 'Action',    width: 200,
-    renderCell: () => {
+    renderCell: (data) => {
       return (
         <div className="cellAction">
           <div className="seeButton">
@@ -44,9 +44,9 @@ const columns = [
 ]
 
 const rows = [
-  {id: 2, name: "Andi Montilla", salary: 7000, asset: "USD", status: "active"},
-  {id: 1, name: "Beltz Anhxton", salary: 2500, asset: "CAD", status: "active"},
-  {id: 3, name: "TIDV Tech",     salary: 1000, asset: "CAD", status: "active"}
+  {id: 2, name: "Andi Montilla", salary: 7000, asset: "USD", status: "active", email: "anmdev32@gmail.com"      },
+  {id: 1, name: "Beltz Anhxton", salary: 2500, asset: "CAD", status: "active", email: "beltz.18kyodai@gmail.com"},
+  {id: 3, name: "TIDV Tech",     salary: 1000, asset: "CAD", status: "active", email: "tidvafj@gmail.com"       }
 ]
 
 function Payroll() {

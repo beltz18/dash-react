@@ -17,3 +17,10 @@ export const setUsers = (users) => {
     users
   }
 }
+
+export const setTransactions = (transaction) => {
+  return {
+    type: 'GET',
+    transaction
+  }
+}

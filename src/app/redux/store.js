@@ -23,9 +23,20 @@ function usersReducer(state=null,action) {
   }
 }
 
+function transactionReducer(state=null,action) {
+  switch (action.type) {
+    case 'GET':
+      return action.transaction
+  
+    default:
+      return state
+  }
+}
+
 let myReducer = combineReducers({
   user: userReducer,
-  users: usersReducer
+  users: usersReducer,
+  transaction: transactionReducer,
 })
 
 let store = createStore(myReducer)
