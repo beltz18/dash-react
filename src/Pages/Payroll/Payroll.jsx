@@ -3,6 +3,7 @@ import Sidebar   from "../../Components/Sidebar/Sidebar"
 import Navbar    from "../../Components/Navbar/Navbar"
 import Datatable from "../../Components/DataTable/Datatable"
 import MyModal   from "../../Components/Modal/Modal"
+import FormPay   from "../../Components/Modal/FormPay"
 import {
   Button
 } from "@mui/material"
@@ -53,7 +54,9 @@ function Payroll() {
       <div className="payrollContainer">
         <Navbar />
         <div className="container">
-          <Datatable columns={columns} rows={rows} />
+          <Datatable columns={columns} rows={rows}>
+            <FormPay />
+          </Datatable>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import { Link }     from "react-router-dom"
 import Sidebar      from "../../Components/Sidebar/Sidebar"
 import Navbar       from "../../Components/Navbar/Navbar"
 import Datatable    from "../../Components/DataTable/Datatable"
+import FormModal    from "../../Components/Modal/FormModal"
 import store        from '../../app/redux/store'
 import {
   Create,
@@ -61,7 +62,9 @@ function List() {
       <Sidebar />
       <div className="listContainer">
         <Navbar />
-        <Datatable rows={rows} columns={columns} />
+        <Datatable rows={rows} columns={columns}>
+          <FormModal />
+        </Datatable>
       </div>
     </div>
   )

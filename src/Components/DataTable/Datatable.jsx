@@ -1,13 +1,12 @@
 import "../../Styles/Datatable.scss"
 import { DataGrid } from "@mui/x-data-grid"
-import FormModal    from "../Modal/FormModal"
 
-function Datatable({rows,columns}) {
+function Datatable({rows,columns,children}) {
   return (
     <div className="datatable">
       <div className="contHead">
         <h1 className="userTitle">Employees</h1>
-        <FormModal />
+        {children}
       </div>
       <DataGrid
         rows={rows}
