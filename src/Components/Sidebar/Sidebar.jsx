@@ -60,7 +60,7 @@ function Sidebar() {
               <span>Payroll</span>
             </li>
           </Link>
-          <Link to={"/"} className="link">
+          <Link to={"/calendar"} className="link">
             <li>
               <CalendarMonth className='icon' />
               <span>Calendar</span>

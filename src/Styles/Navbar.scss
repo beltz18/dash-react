@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   border-bottom: .5px solid rgba($color: #000000, $alpha: .25);
-  background-color: #B131B5;
+  background-color: #4054B2;
 
   .wrapper {
     width: 100%;
@@ -34,7 +34,7 @@
 
       .icon {
         &:hover {
-          color: #B131B5;
+          color: #5496DD;
           transition: 500ms;
         }
       }

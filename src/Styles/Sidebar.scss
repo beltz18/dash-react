@@ -4,7 +4,7 @@
   background-color: white;
 
   .top {
-    background-color: #B131B5;
+    background-color: #4054B2;
     height: 65px;
     display: flex;
     align-items: center;
@@ -44,11 +44,11 @@
         }
 
         .icon {
-          color: #B131B5;
+          color: #5496DD;
         }
 
         &:hover {
-          background-color: #B131B5;
+          background-color: #5496DD;
           color: white;
           transition: 500ms;
 
@@ -62,7 +62,7 @@
 
   .bottom {
     width: 100%;
-    background-color: #B131B5;
+    background-color: #4054B2;
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -93,7 +93,7 @@
       width: 20px;
       height: 20px;
       border-radius: 5px;
-      border: 1px solid #B131B5;
+      border: 1px solid #4054B2;
       margin: 5px;
       cursor: pointer;
 
