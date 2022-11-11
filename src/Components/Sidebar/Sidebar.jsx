@@ -16,11 +16,10 @@ import {
 } from '@mui/icons-material'
 
 function Sidebar() {
-  // const [selected, setSelected] = useState("Profile");
   return (
     <div className="sidebar">
       <div className='top'>
-        <span className="logo">WAMC</span>
+        <span className="logo">Amigo Workforce</span>
       </div>
       <div className='center'>
         <ul>
