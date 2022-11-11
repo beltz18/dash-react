@@ -1,4 +1,5 @@
 import '../../Styles/Sidebar.scss'
+import amigoLogo   from '../../Resources/img/amigo_workforce_logo.webp'
 // import {useState}  from 'react'
 import { Link }    from 'react-router-dom';
 // import Dropdown from '../Dropdown/Dropdown'
@@ -19,7 +20,9 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className='top'>
-        <span className="logo">Amigo Workforce</span>
+        <span className="logo">
+          <img src={amigoLogo} alt="Logo Amigo Workforce" className='LogoAmigo' />
+        </span>
       </div>
       <div className='center'>
         <ul>

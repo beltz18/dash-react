@@ -19,7 +19,8 @@ form {
 }
 
 .regForm[type=button] {
-  background-color: #4054B2;
+  background: rgb(64,84,178);
+  background: linear-gradient(90deg, rgba(64,84,178,1) 0%, rgba(84,150,221,1) 100%);
   color: white;
   border: none;
   outline: none;

@@ -5,13 +5,21 @@ function SchedulerCalendar() {
   return (
     <div className="scheduler">
       <Scheduler
+        hourFormat="24"
         view="month"
         deletable={false}
         month={{
           weekDays: [0, 1, 2, 3, 4, 5, 6],
-          weekStartOn: 6,
+          weekStartOn: 1,
           startHour: 6, 
           endHour: 21
+        }}
+        week={{
+          weekDays: [0, 1, 2, 3, 4, 5, 6],
+          weekStartOn: 1,
+          startHour: 6, 
+          endHour: 21,
+          step: 60
         }}
         day={{
           startHour: 6,
@@ -21,16 +29,15 @@ function SchedulerCalendar() {
         events={[
           {
             event_id: 1,
-            title: "Event 1",
-            start: new Date("2022/11/11 09:30"),
-            end: new Date("2022/11/11 10:30"),
+            title: "Company session",
+            start: new Date("2022/11/11 13:00"),
+            end: new Date("2022/11/11 14:30"),
           },
           {
             event_id: 2,
-            title: "Event 2",
-            start: new Date("2022/11/12 10:00"),
-            end: new Date("2022/11/12 11:00"),
-            
+            title: "Company session",
+            start: new Date("2022/11/14 10:00"),
+            end: new Date("2022/11/14 12:00"),
           },
         ]}
         fields={[
