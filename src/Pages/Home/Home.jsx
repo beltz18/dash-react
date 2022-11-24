@@ -1,6 +1,5 @@
 import '../../Styles/Home.scss'
 import axios           from 'axios'
-import addNotification from 'react-push-notification'
 import logo            from '../../Resources/img/wamc.png'
 import store           from '../../app/redux/store'
 import Sidebar         from '../../Components/Sidebar/Sidebar'
@@ -54,22 +53,8 @@ const Home = () => {
     console.log(err)
   })
 
-  const notification = () => {
-    addNotification({
-      title: "Welcome",
-      message: "Hello World",
-      duration: 5000,
-      icon: logo,
-      native: true,
-      onClick: () => {
-        console.log("Hello Push Notif")
-      }
-    })
-  }
-
   return (
     <div className="home">
-      {notification()}
       <Sidebar />
       <div className="homeContainer">
         <Navbar />
