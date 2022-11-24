@@ -1,4 +1,5 @@
 import '../../Styles/Home.scss'
+import React           from 'react'
 import axios           from 'axios'
 import logo            from '../../Resources/img/wamc.png'
 import store           from '../../app/redux/store'

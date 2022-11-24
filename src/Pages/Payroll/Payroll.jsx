@@ -1,4 +1,5 @@
 import "../../Styles/Payroll.scss"
+import React     from 'react'
 import Sidebar   from "../../Components/Sidebar/Sidebar"
 import Navbar    from "../../Components/Navbar/Navbar"
 import Datatable from "../../Components/DataTable/Datatable"

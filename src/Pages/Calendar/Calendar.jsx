@@ -1,4 +1,5 @@
 import '../../Styles/Calendar.scss'
+import React     from 'react'
 import Sidebar   from '../../Components/Sidebar/Sidebar'
 import Navbar    from '../../Components/Navbar/Navbar'
 import Scheduler from '../../Components/Calendar/Scheduler'

@@ -1,4 +1,5 @@
 import '../../Styles/Sidebar.scss'
+import React       from 'react'
 import amigoLogo   from '../../Resources/img/amigo_workforce_logo.webp'
 // import {useState}  from 'react'
 import { Link }    from 'react-router-dom';

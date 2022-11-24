@@ -1,12 +1,10 @@
 import "../../Styles/Single.scss"
-import {
-  useParams
-} from "react-router-dom"
-
-import store   from "../../app/redux/store"
-import Sidebar from "../../Components/Sidebar/Sidebar"
-import Navbar  from "../../Components/Navbar/Navbar"
-import Map     from "../../app/map/component/map/Map"
+import React           from 'react'
+import { useParams }   from "react-router-dom"
+import store           from "../../app/redux/store"
+import Sidebar         from "../../Components/Sidebar/Sidebar"
+import Navbar          from "../../Components/Navbar/Navbar"
+import Map             from "../../app/map/component/map/Map"
 
 function Single() {
   const { sin } = useParams()

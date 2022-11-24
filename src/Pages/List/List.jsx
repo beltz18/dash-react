@@ -1,4 +1,5 @@
 import "../../Styles/List.scss"
+import React        from 'react'
 import { Link }     from "react-router-dom"
 import Sidebar      from "../../Components/Sidebar/Sidebar"
 import Navbar       from "../../Components/Navbar/Navbar"

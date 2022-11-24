@@ -1,4 +1,5 @@
 import "../../Styles/Datatable.scss"
+import React        from 'react'
 import { DataGrid } from "@mui/x-data-grid"
 
 function Datatable({rows,columns,children}) {

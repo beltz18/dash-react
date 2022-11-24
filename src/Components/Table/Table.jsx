@@ -8,6 +8,7 @@ import {
   Paper,
   TableBody,
 } from "@mui/material"
+import React from 'react'
 
 const data = [
   {

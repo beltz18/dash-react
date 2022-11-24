@@ -1,6 +1,7 @@
 import { useState } from "react"
-import Datatable from "../../Components/DataTable/Datatable"
-import store     from "../../app/redux/store"
+import React        from 'react'
+import Datatable    from "../../Components/DataTable/Datatable"
+import store        from "../../app/redux/store"
 import {
   Modal,
   Button,

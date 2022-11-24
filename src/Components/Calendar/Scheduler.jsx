@@ -1,4 +1,5 @@
 import "../../Styles/Scheduler.scss"
+import React         from 'react'
 import { Scheduler } from "@aldabil/react-scheduler";
 
 function SchedulerCalendar() {

@@ -1,5 +1,5 @@
 import '../../Styles/Navbar.scss'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import store from '../../app/redux/store'
 import {
   Search,

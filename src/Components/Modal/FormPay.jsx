@@ -1,6 +1,6 @@
 import '../../Styles/FormModal.scss'
-import { useState } from "react"
-import axios        from "axios"
+import React, { useState } from "react"
+import axios               from "axios"
 import { setTransactions } from '../../app/redux/action'
 import store from '../../app/redux/store'
 import {

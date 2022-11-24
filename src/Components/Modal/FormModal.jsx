@@ -1,5 +1,5 @@
 import '../../Styles/FormModal.scss'
-import { useState } from "react"
+import React, { useState } from "react"
 import {
   Modal,
   Box,
