@@ -3,7 +3,7 @@ import React   from 'react'
 import store   from '../../app/redux/store'
 import Sidebar from '../../Components/Sidebar/Sidebar'
 import Navbar  from '../../Components/Navbar/Navbar'
-import Map     from '../../app/map/component/map/Map'
+// import Map     from '../../app/map/component/map/Map'
 
 const Profile = () => {
   const me = store.getState().user
@@ -46,7 +46,7 @@ const Profile = () => {
             </div>
           </div>
           <div className="right">
-            <Map />
+            {/* <Map /> */}
           </div>
         </div>
         <div className="bottom"></div>

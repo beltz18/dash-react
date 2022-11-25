@@ -12,7 +12,7 @@ import avatar from '../../Resources/img/avatar.jpg'
 
 function Navbar() {
   const [click,setClick] = useState(false)
-  const [user, setUser]  = useState(store.getState().user)
+  const user             = useState(store.getState().user)
 
   const tick = () => {
     click === true ? setClick(false) : setClick(true)
