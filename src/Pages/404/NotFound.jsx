@@ -1,4 +1,4 @@
-import '../../Styles/404.scss'
+import '../../Styles/404.css'
 import React from 'react'
 
 function NotFound() {

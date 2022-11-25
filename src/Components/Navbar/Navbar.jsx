@@ -1,4 +1,4 @@
-import '../../Styles/Navbar.scss'
+import '../../Styles/Navbar.css'
 import React, { useState } from 'react'
 import store from '../../app/redux/store'
 import {

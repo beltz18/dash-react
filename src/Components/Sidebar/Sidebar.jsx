@@ -1,4 +1,4 @@
-import '../../Styles/Sidebar.scss'
+import '../../Styles/Sidebar.css'
 import React       from 'react'
 import amigoLogo   from '../../Resources/img/amigo_workforce_logo.webp'
 // import {useState}  from 'react'

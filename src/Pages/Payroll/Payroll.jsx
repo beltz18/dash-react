@@ -1,4 +1,4 @@
-import "../../Styles/Payroll.scss"
+import "../../Styles/Payroll.css"
 import React     from 'react'
 import Sidebar   from "../../Components/Sidebar/Sidebar"
 import Navbar    from "../../Components/Navbar/Navbar"

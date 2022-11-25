@@ -1,4 +1,4 @@
-import '../../Styles/FormModal.scss'
+import '../../Styles/FormModal.css'
 import React, { useState } from "react"
 import {
   Modal,

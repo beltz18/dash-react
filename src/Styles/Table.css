@@ -1,0 +1,9 @@
+.table .status {
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: white;
+}
+
+.table .status.approved { color: green;     background-color: rgb(0,128,0,.15); }
+.table .status.pending  { color: goldenrod; background-color: rgb(218,165,32,.15); }
+.table .status.denied   { color: crimson;   background-color: rgb(220,20,60,.15); }

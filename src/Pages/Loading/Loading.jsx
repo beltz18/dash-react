@@ -1,4 +1,4 @@
-import "../../Styles/Loading.scss"
+import "../../Styles/Loading.css"
 import React from 'react'
 import {
   useParams,

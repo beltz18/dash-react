@@ -1,0 +1,56 @@
+.widget {
+  border-top: 3px solid #5496DD;
+  border-bottom: 3px solid #5496DD;
+  display: flex;
+  flex: 1;
+  padding: 10px;
+  justify-content: space-between;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,.47);
+  box-shadow: 2px 4px 10px 1px rgba(201,201,201,.47);
+  border-radius: 10px;
+  height: 150px;
+  background-color: white;
+}
+
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.widget .left .title, .widget .right .title {
+  font-weight: bold;
+  font-size: 17px;
+  color: gray;
+}
+
+.widget .left .counter, .widget .right .counter {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.widget .left span.link, .widget .right span.link {
+  width: max-content;
+  font-size: 16px;
+  color: #4054B2;
+  border-bottom: 1px solid #5496DD;
+  cursor: pointer;
+}
+
+.widget .left .link, .widget .right .link { text-decoration: none; }
+
+.widget .left .percentage, .widget .right .percentage {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.widget .left .percentage.positive, .widget .right .percentage.positive { color: green; }
+.widget .left .percentage.negative, .widget .right .percentage.negative { color: red; }
+
+.widget .left .icon, .widget .right .icon {
+  font-size: 38px;
+  padding: 5px;
+  border-radius: 5px;
+  align-self: flex-end;
+}

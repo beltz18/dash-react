@@ -1,4 +1,4 @@
-import "../../Styles/Datatable.scss"
+import "../../Styles/Datatable.css"
 import React        from 'react'
 import { DataGrid } from "@mui/x-data-grid"
 

@@ -4,7 +4,8 @@
   min-height: 100vh;
   background-color: whitesmoke;
   
-  .listContainer {
-    flex: 10;
-  }
+}
+
+.list .listContainer {
+  flex: 10;
 }

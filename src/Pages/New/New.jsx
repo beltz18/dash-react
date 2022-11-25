@@ -1,4 +1,4 @@
-import '../../Styles/New.scss'
+import '../../Styles/New.css'
 import React     from 'react'
 import Sidebar   from "../../Components/Sidebar/Sidebar"
 import Navbar    from "../../Components/Navbar/Navbar"

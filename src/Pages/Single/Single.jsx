@@ -1,4 +1,4 @@
-import "../../Styles/Single.scss"
+import "../../Styles/Single.css"
 import React           from 'react'
 import { useParams }   from "react-router-dom"
 import store           from "../../app/redux/store"

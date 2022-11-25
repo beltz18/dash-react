@@ -1,4 +1,4 @@
-import "../../Styles/List.scss"
+import "../../Styles/List.css"
 import React        from 'react'
 import { Link }     from "react-router-dom"
 import Sidebar      from "../../Components/Sidebar/Sidebar"

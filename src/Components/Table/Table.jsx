@@ -1,4 +1,4 @@
-import "../../Styles/Table.scss"
+import "../../Styles/Table.css"
 import {
   TableContainer,
   Table,

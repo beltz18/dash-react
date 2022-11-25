@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {
   KeyboardArrowDown,
 } from "@mui/icons-material"
-import '../../Styles/Dropdown.scss'
+import '../../Styles/Dropdown.css'
 
 function Dropdown({ selected, setSelected }) {
   const [isActive, setIsActive] = useState(false);

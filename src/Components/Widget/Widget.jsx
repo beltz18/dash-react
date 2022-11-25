@@ -1,4 +1,4 @@
-import "../../Styles/Widget.scss"
+import "../../Styles/Widget.css"
 import {
   KeyboardArrowUp,
   KeyboardArrowDown,

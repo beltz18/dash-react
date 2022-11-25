@@ -1,4 +1,4 @@
-import "../../Styles/Scheduler.scss"
+import "../../Styles/Scheduler.css"
 import React         from 'react'
 import { Scheduler } from "@aldabil/react-scheduler";
 

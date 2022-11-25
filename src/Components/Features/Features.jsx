@@ -1,4 +1,4 @@
-import "../../Styles/Features.scss"
+import "../../Styles/Features.css"
 import {
   MoreVertRounded,
   KeyboardArrowDown,

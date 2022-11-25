@@ -1,4 +1,4 @@
-import '../../Styles/Calendar.scss'
+import '../../Styles/Calendar.css'
 import React     from 'react'
 import Sidebar   from '../../Components/Sidebar/Sidebar'
 import Navbar    from '../../Components/Navbar/Navbar'

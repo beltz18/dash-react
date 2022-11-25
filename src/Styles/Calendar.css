@@ -1,0 +1,13 @@
+.calendar {
+  width: 100%;
+  display: flex;
+}
+
+.calendar .calendarContainer {
+  flex: 10;
+  background-color: whitesmoke;
+}
+
+.calendar .calendarContainer .container {
+  padding: 20px;
+}

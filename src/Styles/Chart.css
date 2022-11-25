@@ -5,12 +5,12 @@
   padding: 10px;
   color: gray;
   background-color: white;
+}
 
-  .title {
-    margin-bottom: 20px;
-  }
+.chart .title {
+  margin-bottom: 20px;
+}
 
-  .chartGrid {
-    stroke: lightgray;
-  }
+.chart .chartGrid {
+  stroke: lightgray;
 }
