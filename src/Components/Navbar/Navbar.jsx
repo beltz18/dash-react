@@ -1,5 +1,5 @@
 import '../../Styles/Navbar.css'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import store from '../../app/redux/store'
 import {
   Search,
@@ -9,10 +9,16 @@ import {
   NotificationsRounded
 } from '@mui/icons-material'
 import avatar from '../../Resources/img/avatar.jpg'
+import {
+  ToastContainer,
+  toast
+} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function Navbar() {
   const [click,setClick] = useState(false)
   const user             = useState(store.getState().user)
+  console.log(user[0].name)
 
   const tick = () => {
     click === true ? setClick(false) : setClick(true)
@@ -36,6 +42,51 @@ function Navbar() {
     }
   }
 
+  const notis = [
+    [
+      "first notif",
+      {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        delay: 0
+      }
+    ],
+    [
+      "second notif",
+      {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        delay: 1000
+      }
+    ]
+  ]
+  
+  const notify = () => { notis.forEach(item => {
+    toast(item[0], {
+      position: item[1].position,
+      autoClose: item[1].autoClose,
+      hideProgressBar: item[1].hideProgressBar,
+      closeOnClick: item[1].closeOnClick,
+      pauseOnHover: item[1].pauseOnHover,
+      draggable: item[1].draggable,
+      progress: item[1].progress,
+      theme: item[1].theme,
+      delay: item[1].delay
+    })
+  })}
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -56,11 +107,12 @@ function Navbar() {
             <div className="counter"></div>
           </div>
           <div className="item" title='Notifications'>
-            <NotificationsRounded className='icon' />
+            <NotificationsRounded className='icon' onClick={notify} />
+            <ToastContainer />
             <div className="counter"></div>
           </div>
           <div className="item" title='Profile'>
-            <h5 className='name'>{user.name}</h5>
+            <h5 className='name'>{user[0].name}</h5>
             <img src={ avatar } alt="Avatar" className='avatar' />
           </div>
         </div>
