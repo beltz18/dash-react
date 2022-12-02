@@ -1,55 +1,55 @@
 .profile {
   display: flex;
-  width: 100%;
+  width: var(--full);
 }
 
 .profile .profileContainer {
   flex: 10;
-  background-color: whitesmoke;
+  background-color: var(--light);
 }
 
 .profile .title {
   font-size: 16px;
-  color: lightgray;
-  margin-bottom: 20px;
+  color: var(--lightgray);
+  margin-bottom: var(--twenty);
 }
 
 .profile .profileContainer .top {
-  padding: 20px;
+  padding: var(--twenty);
   display: flex;
-  gap: 20px;
+  gap: var(--twenty);
 }
 
 .profile .profileContainer .top .left {
   flex: 1;
-  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
-  box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
-  padding: 20px;
+  -webkit-box-shadow: 2px 4px var(--ten) 1px rgba(0, 0, 0, .47);
+  box-shadow: 2px 4px var(--ten) 1px rgba(0, 0, 0, .47);
+  padding: var(--twenty);
   position: relative;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .profile .profileContainer .top .left .edit {
   position: absolute;
-  top: 0;
-  right: 0;
-  padding: 5px 10px;
+  top: var(--zero);
+  right: var(--zero);
+  padding: var(--five) var(--ten);
   font-size: 12px;
-  background-color: #b131b52c;
-  color: #B131B5;
+  background-color: var(--darkblue);
+  color: var(--light);
   cursor: pointer;
 }
 
 .profile .profileContainer .top .left .item {
   display: flex;
   align-items: center;
-  gap: 20px;  
+  gap: var(--twenty);  
 }
 
 .profile .profileContainer .top .left .item .imgItem {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: var(--hundred);
+  height: var(--hundred);
+  border-radius: var(--half);
   object-fit: cover;
 }
 
@@ -58,18 +58,18 @@
 }
 
 .profile .profileContainer .top .left .item .details .a {
-  margin-bottom: 20px;
+  margin-bottom: var(--twenty);
 }
 
 .profile .profileContainer .top .left .item .details .detailItem {
-  margin-bottom: 10px;
+  margin-bottom: var(--ten);
   font-size: 14px; 
 }
 
 .profile .profileContainer .top .left .item .details .detailItem .itemKey {
   font-weight: bold;
-  color: gray;
-  margin-right: 5px;
+  color: var(--gray);
+  margin-right: var(--five);
 }
 
 .profile .profileContainer .top .left .item .details .detailItem .itemValue {
@@ -77,11 +77,11 @@
 }
 
 .profile .profileContainer .top .right {
-  width: 100%;
-  height: 200px;
+  width: var(--full);
+  height: calc(var(--hundred) + var(--hundred));
   flex: 2;
-  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
-  box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
-  padding: 20px;
-  background-color: white;
+  -webkit-box-shadow: 2px 4px var(--ten) 1px rgba(0, 0, 0, .47);
+  box-shadow: 2px 4px var(--ten) 1px rgba(0, 0, 0, .47);
+  padding: var(--twenty);
+  background-color: var(--white);
 }

@@ -1,7 +1,6 @@
 import '../../Styles/Home.css'
 import React           from 'react'
 import axios           from 'axios'
-// import logo            from '../../Resources/img/wamc.png'
 import store           from '../../app/redux/store'
 import Sidebar         from '../../Components/Sidebar/Sidebar'
 import Navbar          from '../../Components/Navbar/Navbar'

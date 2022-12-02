@@ -1,18 +1,18 @@
 .navbar {
-  height: 65px;
+  height: calc(var(--fifty) + var(--ten) + var(--five));
   display: flex;
   align-items: center;
   border-bottom: .5px solid rgba(0, 0, 0, .25);
-  background: rgb(64,84,178);
-  background: linear-gradient(90deg, rgba(64,84,178,1) 0%, rgba(84,150,221,1) 100%);
+  background: var(--blue);
+  background: linear-gradient(90deg, var(--blue) var(--zero), var(--lightblue) var(--full));
 }
 
 .navbar .wrapper {
-  width: 100%;
+  width: var(--full);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: var(--twenty);
 }
 
 .navbar .wrapper .icon {
@@ -22,22 +22,22 @@
 .navbar .wrapper .search {
   display: flex;
   align-items: center;
-  border: .5px solid lightgray;
-  background-color: white;
+  border: .5px solid var(--lightgray);
+  background-color: var(--white);
   padding: 0 5px 0 0;
-  border-radius: 25px;
+  border-radius: calc(var(--twenty) + var(--five));
 }
 
 .navbar .wrapper .search input {
-  border: none;
-  outline: none;
-  padding: 5px 15px;
+  border: var(--none);
+  outline: var(--none);
+  padding: var(--five) calc(var(--ten) + var(--five));
   border-radius: 25px 0 0 25px;
-  border-right: 1px solid lightgray;
+  border-right: var(--one) solid var(--lightgray);
 }
 
 .navbar .wrapper .search .icon:hover {
-  color: #5496DD;
+  color: var(--lightblue);
   transition: 500ms;
 }
 
@@ -46,34 +46,34 @@
 }
 
 .navbar .wrapper .items .item {
-  color: white;
+  color: var(--white);
   display: flex;
   align-items: center;
-  margin-right: 15px;
+  margin-right: calc(var(--ten) + var(--five));
   cursor: pointer;
   position: relative;
 }
 
 .navbar .wrapper .items .item .icon {
-  color: white;
+  color: var(--white);
 }
 
 .navbar .wrapper .items .item .name {
-  margin-right: 10px;
+  margin-right: var(--ten);
 }
 
 .navbar .wrapper .items .item .avatar {
-  width: 40px;
-  height: 40px;
+  width: calc(var(--twenty) + var(--twenty));
+  height: calc(var(--twenty) + var(--twenty));
   border-radius: 50px;
 }
 
 .navbar .wrapper .items .item .counter {
-  width: 15px;
-  height: 15px;
-  background-color: red;
-  border-radius: 50%;
+  width: calc(var(--ten) + var(--five));
+  height: calc(var(--ten) + var(--five));
+  background-color: var(--red);
+  border-radius: var(--half);
   position: absolute;
-  top: 5px;
+  top: var(--five);
   right: -5px;
 }

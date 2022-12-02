@@ -25,6 +25,7 @@ function Sidebar() {
           <img src={amigoLogo} alt="Logo Amigo Workforce" className='LogoAmigo' />
         </span>
       </div>
+      <div className="middle"></div>
       <div className='center'>
         <ul>
           <Link to={"/"} className="link">

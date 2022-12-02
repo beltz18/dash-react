@@ -3,25 +3,25 @@ form {
 }
 
 .regForm {
-  padding: 10px;
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  margin: 3px;
+  padding: var(--ten);
+  width: var(--full);
+  border: var(--one) solid rgba(0, 0, 0, 0.25);
+  border-radius: var(--two);
+  margin: var(--three);
 }
 
 .regForm:nth-child(2) {
-  margin-top: 25px;
+  margin-top: calc(var(--twenty) + var(--five));
 }
 
 .regForm:nth-last-child(1) {
-  margin-top: 25px;
+  margin-top: calc(var(--twenty) + var(--five));
 }
 
 .regForm[type=button] {
-  background: rgb(64,84,178);
-  background: linear-gradient(90deg, rgba(64,84,178,1) 0%, rgba(84,150,221,1) 100%);
-  color: white;
-  border: none;
-  outline: none;
+  background: var(--blue);
+  background: linear-gradient(90deg, var(--blue) var(--zero), var(--lightblue) var(--full));
+  color: var(--white);
+  border: var(--none);
+  outline: var(--none);
 }

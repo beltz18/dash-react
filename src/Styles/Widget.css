@@ -1,15 +1,15 @@
 .widget {
-  border-top: 3px solid #5496DD;
-  border-bottom: 3px solid #5496DD;
+  border-top: var(--three) solid var(--lightblue);
+  border-bottom: var(--three) solid var(--lightblue);
   display: flex;
   flex: 1;
-  padding: 10px;
+  padding: var(--ten);
   justify-content: space-between;
-  -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,.47);
-  box-shadow: 2px 4px 10px 1px rgba(201,201,201,.47);
-  border-radius: 10px;
-  height: 150px;
-  background-color: white;
+  -webkit-box-shadow: var(--two) calc(var(--two) + var(--two)) var(--ten) var(--one) rgba(0,0,0,.47);
+  box-shadow: var(--two) calc(var(--two) + var(--two)) var(--ten) var(--one) rgba(201,201,201,.47);
+  border-radius: var(--ten);
+  height: calc(var(--hundred) + var(--fifty));
+  background-color: var(--white);
 }
 
 .left, .right {
@@ -21,7 +21,7 @@
 .widget .left .title, .widget .right .title {
   font-weight: bold;
   font-size: 17px;
-  color: gray;
+  color: var(--gray);
 }
 
 .widget .left .counter, .widget .right .counter {
@@ -32,12 +32,12 @@
 .widget .left span.link, .widget .right span.link {
   width: max-content;
   font-size: 16px;
-  color: #4054B2;
-  border-bottom: 1px solid #5496DD;
+  color: var(--blue);
+  border-bottom: var(--one) solid var(--lightblue);
   cursor: pointer;
 }
 
-.widget .left .link, .widget .right .link { text-decoration: none; }
+.widget .left .link, .widget .right .link { text-decoration: var(--none); }
 
 .widget .left .percentage, .widget .right .percentage {
   display: flex;
@@ -45,12 +45,12 @@
   font-size: 18px;
 }
 
-.widget .left .percentage.positive, .widget .right .percentage.positive { color: green; }
-.widget .left .percentage.negative, .widget .right .percentage.negative { color: red; }
+.widget .left .percentage.positive, .widget .right .percentage.positive { color: var(--green); }
+.widget .left .percentage.negative, .widget .right .percentage.negative { color: var(--red); }
 
 .widget .left .icon, .widget .right .icon {
   font-size: 38px;
-  padding: 5px;
-  border-radius: 5px;
+  padding: var(--five);
+  border-radius: var(--five);
   align-self: flex-end;
 }

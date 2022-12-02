@@ -1,10 +1,10 @@
 .datatable {
   height: 500px;
-  padding: 20px;
+  padding: var(--twenty);
 }
 
 .datatable .Datatable {
-  background-color: white;
+  background-color: var(--white);
 }
 
 .datatable .contHead {
@@ -14,35 +14,35 @@
 }
 
 .datatable .contHead .userTitle {
-  margin-bottom: 10px;
+  margin-bottom: var(--ten);
 }
 
 .datatable .contHead .new {
-  width: 50px;
+  width: var(--fifty);
   display: flex;
   justify-content: center;
-  background: rgb(64,84,178);
-  background: linear-gradient(90deg, rgba(64,84,178,1) 0%, rgba(84,150,221,1) 100%);
+  background: var(--blue);
+  background: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 100%);
   border: none;
   outline: none;
-  color: white;
-  padding: 5px;
-  border-radius: 5px;
+  color: var(--white);
+  padding: var(--five);
+  border-radius: var(--five);
   cursor: pointer;
 }
 
 .datatable span {
-  color: white;
-  padding: 2px 5px;
+  color: var(--white);
+  padding: 2px var(--five);
 }
 
 .datatable span.online {
-  color: green;
+  color: var(--green);
   background-color: rgb(0,128,0,.15);
 }
 
 .datatable span.offline {
-  color: crimson;
+  color: var(--crimson);
   background-color: rgb(220,20,60,.15);
 }
 
@@ -53,28 +53,28 @@
 }
 
 .datatable .cellAction .seeButton {
-  padding: 2px 5px;
-  border-radius: 5px;
-  color: gray;
-  border: 1px solid rgba(169, 169, 169, 0.487);
+  padding: 2px var(--five);
+  border-radius: var(--five);
+  color: var(--gray);
+  border: var(--one) solid rgba(169, 169, 169, 0.487);
   background-color: rgb(169, 169, 169, .15);
   cursor: pointer;
 }
 
 .datatable .cellAction .updateButton {
-  padding: 2px 5px;
-  border-radius: 5px;
-  color: darkblue;
-  border: 1px solid rgba(0, 0, 139, 0.487);
+  padding: 2px var(--five);
+  border-radius: var(--five);
+  color: var(--darkblue);
+  border: var(--one) solid rgba(0, 0, 139, 0.487);
   background-color: rgb(0, 0, 139, .15);
   cursor: pointer;
 }
 
 .datatable .cellAction .deleteButton {
-  padding: 2px 5px;
-  border-radius: 5px;
-  color: crimson;
-  border: 1px solid rgba(220, 20, 60, 0.487);
+  padding: 2px var(--five);
+  border-radius: var(--five);
+  color: var(--crimson);
+  border: var(--one) solid rgba(220, 20, 60, 0.487);
   background-color: rgb(220,20,60,.15);
   cursor: pointer;
 }

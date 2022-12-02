@@ -1,8 +1,8 @@
 .list {
   display: flex;
-  width: 100%;
+  width: var(--full);
   min-height: 100vh;
-  background-color: whitesmoke;
+  background-color: var(--light);
   
 }
 

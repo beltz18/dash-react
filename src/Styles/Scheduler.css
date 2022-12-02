@@ -1,8 +1,8 @@
 .scheduler {
-  margin-top: 10px;
-  background-color: white;
-  padding: 15px;
-  -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,.47);
-  box-shadow: 2px 4px 10px 1px rgba(201,201,201,.47);
-  border-radius: 10px;
+  margin-top: var(--ten);
+  background-color: var(--white);
+  padding: calc(var(--ten) + var(--five));
+  -webkit-box-shadow: var(--two) 4px var(--ten) var(--one) rgba(0,0,0,.47);
+  box-shadow: var(--two) 4px var(--ten) var(--one) rgba(201,201,201,.47);
+  border-radius: var(--ten);
 }

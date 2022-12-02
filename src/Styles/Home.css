@@ -1,6 +1,6 @@
 .home {
   display: flex;
-  background-color: whitesmoke;
+  background-color: var(--light);
 }
 
 .home .homeContainer {
@@ -9,24 +9,24 @@
 
 .home .homeContainer .widgets, .home .homeContainer  .charts {
   display: flex;
-  padding: 15px 25px;
-  gap: 20px;
+  padding: calc(var(--ten) + var(--five)) calc(var(--twenty) + var(--five));
+  gap: var(--twenty);
 }
 
 .home .homeContainer .charts {
-  padding: 5px 20px;
+  padding: var(--five) var(--twenty);
 }
 
 .home .homeContainer .listContainer {
   -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,.47);
   box-shadow: 2px 4px 10px 1px rgba(201,201,201,.47);
-  padding: 20px;
-  margin: 20px;
-  background-color: white;
+  padding: var(--twenty);
+  margin: var(--twenty);
+  background-color: var(--white);
 }
 
 .home .homeContainer .listContainer .listTitle {
   font-weight: 500;
-  color: gray;
-  margin-bottom: 15px;
+  color: var(--gray);
+  margin-bottom: calc(var(--ten) + var(--five));
 }

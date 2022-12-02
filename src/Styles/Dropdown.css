@@ -1,19 +1,19 @@
 .container {
-  width: 100%;
+  width: var(--full);
   height: 100vh;
 }
 
 .dropdown {
-  width: 100%;
-  user-select: none;
-  margin: 100px auto;
+  width: var(--full);
+  user-select: var(--none);
+  margin: var(--hundred) auto;
   position: relative;
 }
 
 .dropdown .dropdown-btn {
   padding: 15px 20px;
-  background: #fff;
-  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  background: var(--white);
+  box-shadow: var(--three) var(--three) var(--ten) 6px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -22,21 +22,21 @@
 
 .dropdown .dropdown-content {
   position: absolute;
-  top: 100%;
-  left: 0;
-  padding: 10px;
-  background: #fff;
-  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
-  width: 100%;
+  top: var(--full);
+  left: var(--zero);
+  padding: var(--ten);
+  background: var(--white);
+  box-shadow: var(--three) var(--three) var(--ten) 6px rgba(0, 0, 0, 0.06);
+  width: var(--full);
 }
 
 .dropdown .dropdown-content .dropdown-item {
-  padding: 10px;
+  padding: var(--ten);
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .dropdown .dropdown-content .dropdown-item:hover {
-  background: #B131B5;
-  color:#fff
+  background: var(--blue);
+  color:var(--white)
 }

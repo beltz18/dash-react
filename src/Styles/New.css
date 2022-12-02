@@ -1,9 +1,9 @@
 .new {
   display: flex;
-  width: 100%;
+  width: var(--full);
 }
 
 .new .newContainer {
   flex: 10;
-  background-color: whitesmoke;
+  background-color: var(--light);
 }
