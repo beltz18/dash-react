@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Home",
+    "icon": 0,
+    "path": "/"
+  },
+  {
+    "title": "HR Management",
+    "icon": 10,
+    "path": "/",
+    "childrens": [
+      {
+        "title": "Applicants",
+        "path": "/about"
+      },
+      {
+        "title": "Workers",
+        "path": "/user"
+      },
+      {
+        "title": "Operations",
+        "path": "/about"
+      },
+      {
+        "title": "Payroll",
+        "path": "/payroll"
+      },
+      {
+        "title": "Add vacancies",
+        "path": "/about"
+      },
+      {
+        "title": "Add skills",
+        "path": "/about"
+      }
+    ]
+  },
+  {
+    "title": "Profile",
+    "icon": 1,
+    "path": "/profile"
+  },
+  {
+    "title": "Projects",
+    "icon": 3,
+    "path": "/"
+  },
+  {
+    "title": "Tasks",
+    "icon": 7,
+    "path": "/"
+  },
+  {
+    "title": "Calendar",
+    "icon": 2,
+    "path": "/calendar"
+  },
+  {
+    "title": "Battleground",
+    "icon": 3,
+    "path": "/"
+  },
+  {
+    "title": "Settings",
+    "icon": 5,
+    "path": "/"
+  },
+  {
+    "title": "Logout",
+    "icon": 6,
+    "path": "/exit"
+  }
+]

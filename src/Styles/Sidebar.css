@@ -31,33 +31,42 @@
   background-color: var(--darkgray);
 }
 
-.sidebar .center { margin-top: var(--ten); }
-.sidebar .center ul { list-style-type: var(--none); }
-
-.sidebar .center ul .link {
-  text-decoration: var(--none);
-  color: var(--black);
-}
-
-.sidebar .center ul li {
-  display: flex;
-  align-items: center;
-  padding: var(--ten);
+.sidebar .sidebar-item {
+  padding: calc(var(--ten) + var(--five));
+  color: var(--darkblue);
+  display: block;
   cursor: pointer;
 }
 
-.sidebar .center ul li span { margin-left: var(--ten); }
-.sidebar .center ul li .icon { color: var(--darkblue); }
-.sidebar .center ul li:nth-child(1), .sidebar .center ul li:nth-last-child(1) { margin: var(--zero); }
-.sidebar .center ul li:hover .icon { color: var(--white); }
-
-.sidebar .center ul li:hover {
-  background: var(--blue);
-  background: linear-gradient(90deg, var(--blue) var(--zero), var(--lightblue) var(--full));
-  color: var(--white);
-  transition: 500ms;
+.sidebar .sidebar-item .sidebar-title, .sidebar-item .sidebar-title span {
+  display: flex;
+  justify-content: space-between;
 }
 
+.sidebar .sidebar-item .sidebar-title span .icon { margin-right: var(--ten); }
+.sidebar .sidebar-item .toggle { transition: .5s; }
+.sidebar .sidebar-item.open .toggle { transform: rotate(180deg); }
+
+.sidebar .sidebar-item:hover, .sidebar .sidebar-item.open {
+  background: linear-gradient(90deg, var(--blue) var(--zero), var(--lightblue) var(--full));
+  transition: .5s;
+  color: var(--white);
+}
+
+.sidebar .sidebar-content {
+  padding-left: var(--ten);
+  height: 0;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.sidebar-item.open .sidebar-content { height: auto; }
+.sidebar-item.open .sidebar-content .sidebar-item { color: var(--white); }
+.sidebar .link:active, .sidebar .link:hover, .sidebar .link { color: var(--white); }
+.sidebar .link { text-decoration: var(--none); }
+.sidebar .link { color: var(--darkblue); }
+
+/* Theme Palette Menu */
 .sidebar .bottom {
   width: var(--full);
   background: var(--blue);
@@ -101,3 +110,4 @@
   0%   { bottom: var(--zero); }
   100% { bottom: -150px; }
 }
+/* Theme Palette Menu */
