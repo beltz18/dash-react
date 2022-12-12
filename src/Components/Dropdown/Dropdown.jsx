@@ -1,33 +1,20 @@
-import React, {useState} from 'react'
-import {
-  KeyboardArrowDown,
-} from "@mui/icons-material"
 import '../../Styles/Dropdown.css'
 
-function Dropdown({ selected, setSelected }) {
-  const [isActive, setIsActive] = useState(false);
-  const profileOptions = ["Account,Check in and Check out", "Appearance", "Change Password", "Profile", "Access Rights"];
+const Dropdown = () => {
   return (
     <div className="dropdown">
-      <div className="dropdown-btn" onClick={() => setIsActive(!isActive)}>
-        {selected}
-        <span><KeyboardArrowDown/></span>
-      </div>
-      {isActive && (
-        <div className="dropdown-content">
-          {profileOptions.map((option) => (
-            <div
-              onClick={() => {
-                setSelected(option);
-                setIsActive(false);
-              }}
-              className="dropdown-item"
-            >
-              {option}
-            </div>
-          ))}
+      <div className="dropdown-btn">Choose One</div>
+      <div className="dropdown-content">
+        <div className="dropdown-item">
+          React
         </div>
-      )}
+        <div className="dropdown-item">
+          Vue
+        </div>
+        <div className="dropdown-item">
+          Angular
+        </div>
+      </div>
     </div>
   )
 }

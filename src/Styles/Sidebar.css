@@ -25,7 +25,7 @@
 
 .sidebar .middle {
   margin: auto;
-  width: var(--tquarter);
+  width: var(--ninety);
   height: var(--one);
   opacity: .3;
   background-color: var(--darkgray);

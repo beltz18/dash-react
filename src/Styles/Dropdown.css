@@ -1,12 +1,6 @@
-.container {
-  width: var(--full);
-  height: 100vh;
-}
-
 .dropdown {
   width: var(--full);
   user-select: var(--none);
-  margin: var(--hundred) auto;
   position: relative;
 }
 

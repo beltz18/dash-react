@@ -54,7 +54,6 @@ function FormPay ({children}) {
       asset:   asset.value,
       concept: concept.value
     }
-    console.log(transaction)
     axios.post("http://localhost:4000/register/payment", {transaction})
     alert("Payment registered")
     handleClose()

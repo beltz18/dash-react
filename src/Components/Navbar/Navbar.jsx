@@ -1,6 +1,8 @@
 import '../../Styles/Navbar.css'
+import axios from 'axios'
 import { useState } from 'react'
 import store from '../../app/redux/store'
+import { setTransactions } from '../../app/redux/action'
 import {
   Search,
   Language,
@@ -18,7 +20,36 @@ import 'react-toastify/dist/ReactToastify.css'
 function Navbar() {
   const [click,setClick] = useState(false)
   const user             = useState(store.getState().user)
-  console.log(user[0].name)
+  const rows             = store.getState().transaction
+  let transact           = []
+  if(rows) {
+    rows.forEach(item => {
+      let title = `${item.company} has paid you ${item.amount+item.asset} for concept: "${item.concept}" today`
+      let obj   = {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        delay: 0
+      }
+      transact.push([title, obj])
+    })
+  }
+  
+  axios.get('http://localhost:5000/select/transactions')
+  .then((res) => {
+    if (res.data) {
+      const dataT = res.data
+      store.dispatch(setTransactions(dataT))
+    }
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 
   const tick = () => {
     click === true ? setClick(false) : setClick(true)
@@ -41,39 +72,9 @@ function Navbar() {
       t.classList.add('show')
     }
   }
-
-  const notis = [
-    [
-      "first notif",
-      {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        delay: 0
-      }
-    ],
-    [
-      "second notif",
-      {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        delay: 1000
-      }
-    ]
-  ]
   
-  const notify = () => { notis.forEach(item => {
+  const notify = () => {
+    transact.forEach(item => {
     toast(item[0], {
       position: item[1].position,
       autoClose: item[1].autoClose,

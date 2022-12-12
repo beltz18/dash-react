@@ -1,6 +1,7 @@
 import '../../Styles/Home.css'
-import React           from 'react'
+import { useEffect }   from 'react'
 import axios           from 'axios'
+import io              from 'socket.io-client'
 import store           from '../../app/redux/store'
 import Sidebar         from '../../Components/Sidebar/Sidebar'
 import Navbar          from '../../Components/Navbar/Navbar'
@@ -13,44 +14,13 @@ import {
   setTransactions
 } from '../../app/redux/action'
 
-const Home = () => {
-  axios.get('http://localhost:5000/select/all')
-  .then((res) => {
-    if (res.data) {
-      const arr  = res.data
-      const me   = store.getState().user.email
-      const rows = []
-      for (let i = 0; i < arr.length; i++) {
-        let rand1      = Math.round(Math.random()*100)
-        let rand2      = Math.round(Math.random()*10)
-        let obj        = {
-          id: arr[i]._id,
-          name: arr[i].name,
-          email: arr[i].email,
-          age: rand1,
-          hours: rand2,
-          status: "online"
-        }
-        if (arr[i].email !== me) {
-          rows.push(obj)
-        }
-      }
-      store.dispatch(setUsers(rows))
-    }
-  })
-  .catch((err) => {
-    console.log(err)
-  })
+const socket = io.connect('http://localhost:5300/')
 
-  axios.get('http://localhost:5000/select/transactions')
-  .then((res) => {
-    if (res.data) {
-      const dataT = res.data
-      store.dispatch(setTransactions(dataT))
-    }
-  })
-  .catch((err) => {
-    console.log(err)
+const Home = () => {
+  socket.emit("me", { me: store.getState().user.email })
+  socket.on("data_workers", (data) => {
+    console.log(data)
+    store.dispatch(setUsers(data))
   })
 
   return (

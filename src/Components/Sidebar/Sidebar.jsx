@@ -1,9 +1,9 @@
 import '../../Styles/Sidebar.css'
 import React       from 'react'
 import amigoLogo   from '../../Resources/img/amigo_workforce_logo.webp'
-// import {useState}  from 'react'
+import {useState}  from 'react'
 import { Link }    from 'react-router-dom';
-// import Dropdown from '../Dropdown/Dropdown'
+import Dropdown from '../Dropdown/Dropdown'
 import {
   HomeRounded,
   AccountCircle,
@@ -18,6 +18,7 @@ import {
 } from '@mui/icons-material'
 
 function Sidebar() {
+  const [selected, setSelected] = useState("Choose One");
   return (
     <div className="sidebar">
       <div className='top'>
@@ -82,19 +83,18 @@ function Sidebar() {
               <span>Settings</span>
             </li>
           </Link>
-            <li onClick={() => {window.location="http://localhost:3001"}}>
-              
-              <ExitToApp className='icon' />
-              <span>Logout</span>
-            </li>
-          {/* <li>
+          <li onClick={() => {window.location="http://localhost:3001"}}>
+            <ExitToApp className='icon' />
+            <span>Logout</span>
+          </li>
+          <li>
             <AccountCircle className='icon' />
             <Dropdown selected={selected} setSelected={setSelected} />
           </li>
           <li>
             <AccountCircle className='icon' />
             <Dropdown selected={selected} setSelected={setSelected} />
-          </li> */}
+          </li>
         </ul>
       </div>
       <div className="bottom none theme_bottom">
