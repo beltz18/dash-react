@@ -1,43 +1,28 @@
 import "../../Styles/List.css"
-import { useEffect, useState } from "react"
+import { useState }  from "react"
 import { Link }      from "react-router-dom"
 import Sidebar       from "../../Components/Sidebar/Sidebar"
 import Navbar        from "../../Components/Navbar/Navbar"
 import Datatable     from "../../Components/DataTable/Datatable"
 import FormModal     from "../../Components/Modal/FormModal"
-import store         from "../../app/redux/store"
 import io            from "socket.io-client"
 import {
   Create,
   Visibility,
   Delete
 } from '@mui/icons-material'
-import {
-  setUsers,
-} from '../../app/redux/action'
+import { useEffect } from "react"
 
-const socket  = io.connect("http://localhost:5300/")
+const socket = io.connect("http://localhost:5300")
+
 const columns = [
   { field: 'id',       headerName: 'ID',       width: 70  },
-  { field: 'name',     headerName: 'Fullname', width: 130 },
-  { field: 'email',    headerName: 'Email',    width: 200 },
-  { field: 'age',      headerName: 'Age',      width: 50  },
-  { 
-    field: 'hours',    headerName: 'Hours',    width: 120,
-    renderCell: (data) => {
-      return (
-        <p>{data.row.hours}h</p>
-      )
-    }
-  },
-  { 
-    field: 'status',   headerName: 'Status',   width: 120,
-    renderCell: (data) => {
-      return (
-        <span className={data.row.status}>{data.row.status}</span>
-      )
-    }
-  },
+  { field: 'company',  headerName: 'Company',  width: 130 },
+  { field: 'name',     headerName: 'Name',     width: 200 },
+  { field: 'phone',    headerName: 'Phone',    width: 130 },
+  { field: 'email',    headerName: 'Email',    width: 130 },
+  { field: 'country',  headerName: 'Country',  width: 130 },
+  { field: 'currency', headerName: 'Currency', width: 140 },
   {
     field: 'action',   headerName: 'Action',    width: 200,
     renderCell: (data) => {
@@ -60,22 +45,21 @@ const columns = [
   }
 ]
 
-function List() {
-  const [rows, setRows] = useState(store.getState().users)
+let data = [
+  { id: 1, company: "Zuluagalogistics", name: "Bank-Strox",          email: "no mail",          country: "Venezuela", currency: "CAD" },
+  { id: 2, company: "Zuluagalogistics", name: "Culture Meals",       email: "pedro@hotmal.com", country: "Canada",    currency: "CAD" },
+  { id: 3, company: "Zuluagalogistics", name: "Fast Fast Logistics", email: "fast@gmail.com",   country: "Colombia",  currency: "CAD" }
+]
 
-  useEffect(() => {
-    socket.on("data_workers", (data) => {
-      store.dispatch(setUsers(data))
-      setRows(store.getState().users)
-    })
-  })
+function ListOperation() {
+  const [rows, setRows] = useState(data)
 
   return (
     <div className="list">
       <Sidebar />
       <div className="listContainer">
         <Navbar />
-        <Datatable rows={rows} columns={columns} title="Employees">
+        <Datatable rows={rows} columns={columns} title="Operations">
           <FormModal />
         </Datatable>
       </div>
@@ -83,4 +67,4 @@ function List() {
   )
 }
 
-export default List
+export default ListOperation

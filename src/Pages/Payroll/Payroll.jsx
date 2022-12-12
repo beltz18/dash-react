@@ -57,7 +57,7 @@ function Payroll() {
       <div className="payrollContainer">
         <Navbar />
         <div className="container">
-          <Datatable columns={columns} rows={rows}>
+          <Datatable columns={columns} rows={rows} title="Payroll">
             <FormPay />
           </Datatable>
         </div>

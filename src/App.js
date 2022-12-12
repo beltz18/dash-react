@@ -10,6 +10,8 @@ import Calendar   from './Pages/Calendar/Calendar'
 import Profile    from './Pages/Profile/Profile'
 import New        from './Pages/New/New'
 import List       from './Pages/List/List'
+import List2      from './Pages/List/ListApplicant'
+import List3      from './Pages/List/ListOperation'
 import Single     from './Pages/Single/Single'
 import NotFound   from './Pages/404/NotFound'
 import Loading    from './Pages/Loading/Loading'
@@ -21,17 +23,19 @@ const App = () => {
       <Router>
         <Routes>
           <Route path='/'>
-            <Route index           element={ <Home /> }     />
-            <Route path=':token'   element={ <Loading /> }  />
-            <Route path='calendar' element={ <Calendar /> } />
-            <Route path='profile'  element={ <Profile /> }  />
-            <Route path='new'      element={ <New /> }      />
-            <Route path='payroll'  element={ <Payroll /> }  />
+            <Route index            element={ <Home />     } />
+            <Route path=':token'    element={ <Loading />  } />
+            <Route path='calendar'  element={ <Calendar /> } />
+            <Route path='profile'   element={ <Profile />  } />
+            <Route path='new'       element={ <New />      } />
+            <Route path='payroll'   element={ <Payroll />  } />
+            <Route path='applicant' element={ <List2 />    } />
+            <Route path='operation' element={ <List3 />    } />
             <Route path='user'>
-              <Route index         element={ <List /> }     />
-              <Route path=':sin'   element={ <Single /> }   />
+              <Route index          element={ <List />     } />
+              <Route path=':sin'    element={ <Single />   } />
             </Route>
-            <Route path="*"        element={ <NotFound/> }  />
+            <Route path="*"         element={ <NotFound/>  } />
           </Route>
         </Routes>
       </Router>

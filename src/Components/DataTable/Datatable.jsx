@@ -2,11 +2,11 @@ import "../../Styles/Datatable.css"
 import React        from 'react'
 import { DataGrid } from "@mui/x-data-grid"
 
-function Datatable({rows,columns,children}) {
+function Datatable({rows,columns,title,children}) {
   return (
     <div className="datatable">
       <div className="contHead">
-        <h1 className="userTitle">Employees</h1>
+        <h1 className="userTitle">{title}</h1>
         {children}
       </div>
       <DataGrid

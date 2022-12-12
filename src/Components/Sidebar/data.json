@@ -11,7 +11,7 @@
     "childrens": [
       {
         "title": "Applicants",
-        "path": "/about"
+        "path": "/applicant"
       },
       {
         "title": "Workers",
@@ -19,7 +19,7 @@
       },
       {
         "title": "Operations",
-        "path": "/about"
+        "path": "/operation"
       },
       {
         "title": "Payroll",
