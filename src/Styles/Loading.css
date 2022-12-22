@@ -1,0 +1,36 @@
+.loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .center {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--half);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  animation: fade 1s infinite;
+  background-color: var(--lightblue);
+}
+
+.loading .loader {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@keyframes fade {
+  0%   { opacity: 1;   }
+  10%  { background-color: var(--blue); }
+  25%  { opacity: .75; }
+  50%  { opacity: .50; }
+  75%  { opacity: .75; }
+  90%  { background-color: var(--darkblue); }
+  100% { opacity: 1;   }
+}

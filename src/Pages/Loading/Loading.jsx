@@ -1,6 +1,9 @@
 import "../../Styles/Loading.css"
 import React from 'react'
 import {
+  LinearProgress
+} from "@mui/material"
+import {
   useParams,
   useNavigate
 } from 'react-router-dom'
@@ -35,7 +38,10 @@ function Loading() {
 
   return (
     <div className="loading">
-      <span>Loading...</span>
+      <div className="center">
+        <h3>Loading...</h3>
+      </div>
+      <LinearProgress className="loader" />
     </div>
   )
 }
