@@ -4,14 +4,12 @@ import { Link }      from "react-router-dom"
 import Sidebar       from "../../Components/Sidebar/Sidebar"
 import Navbar        from "../../Components/Navbar/Navbar"
 import Datatable     from "../../Components/DataTable/Datatable"
-import FormModal     from "../../Components/Modal/FormModal"
 import io            from "socket.io-client"
 import {
   Create,
   Visibility,
   Delete
 } from '@mui/icons-material'
-import { useEffect } from "react"
 
 const socket = io.connect("http://localhost:5300")
 
@@ -59,9 +57,7 @@ function ListOperation() {
       <Sidebar />
       <div className="listContainer">
         <Navbar />
-        <Datatable rows={rows} columns={columns} title="Operations">
-          <FormModal />
-        </Datatable>
+        <Datatable rows={rows} columns={columns} title="Operations"></Datatable>
       </div>
     </div>
   )

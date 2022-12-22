@@ -4,7 +4,6 @@ import { Link }      from "react-router-dom"
 import Sidebar       from "../../Components/Sidebar/Sidebar"
 import Navbar        from "../../Components/Navbar/Navbar"
 import Datatable     from "../../Components/DataTable/Datatable"
-import FormModal     from "../../Components/Modal/FormModal"
 import io            from "socket.io-client"
 import {
   Create,
@@ -23,6 +22,7 @@ const columns = [
   { field: 'age',      headerName: 'Age',      width: 50  },
   { field: 'gender',   headerName: 'Gender',   width: 80  },
   { field: 'country',  headerName: 'Country',  width: 130 },
+  { field: 'job',      headerName: 'Job',      width: 130 },
   { 
     field: 'status',   headerName: 'Status',   width: 140,
     renderCell: (data) => {
@@ -53,43 +53,40 @@ const columns = [
   }
 ]
 
-let data = [
-  { id: 1, name: "Andi Montilla",   email: "anmdev32@gmail.com", phone: "+584120625089", age: 24, gender: "male",   country: "Venezuela", status: "recently applied", color: "active" },
-  { id: 2, name: "Pedro Hernandez", email: "pedro@hotmal.com",   phone: "+581234567890", age: 42, gender: "male",   country: "Canada",    status: "recently applied", color: "active" },
-  { id: 3, name: "Laura de rosa",   email: "laura@gmail.com",    phone: "+580001110001", age: 38, gender: "female", country: "Colombia",  status: "recently applied", color: "active" }
+let rows = [
+  {
+    id: 69,
+    name: 'Andi Montilla',
+    email: 'anmdev@gmail.com',
+    phone: '0412062508900',
+    age: '238',
+    gender: 'Male',
+    address: 'San Cristobal',
+    country: 'Deutschland',
+    city: 'Munich',
+    region: 'Munich',
+    pzcode: '123456',
+    job: 'IT consultor',
+    status: 'recently applied',
+    color: 'active'
+  }
 ]
 
-let data2 = []
-
 function ListApplicant() {
-  const [rows, setRows] = useState(data)
+  let [data, setData] = useState(rows)
 
-  socket.on("applicant", (appl) => {
-    let applicant = {
-      id:      appl.id,
-      name:    appl.name,
-      email:   appl.email,
-      phone:   appl.phone,
-      age:     appl.age,
-      gender:  appl.gender,
-      country: appl.country,
-      status:  appl.status,
-      color:   "active"
-    }
-    data2.push(result)
-  })
-
-  let result = new Set(data2)
-  console.log(result, data2)
+  useEffect(() => {
+    socket.on("applicant", (appl) => {
+      setData([...data, appl])
+    })
+  }, [data])
 
   return (
     <div className="list">
       <Sidebar />
       <div className="listContainer">
         <Navbar />
-        <Datatable rows={rows} columns={columns} title="Applicants">
-          <FormModal />
-        </Datatable>
+        <Datatable rows={data} columns={columns} title="Applicants"></Datatable>
       </div>
     </div>
   )

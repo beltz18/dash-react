@@ -17,6 +17,7 @@ import {
 const socket = io.connect('http://localhost:5300/')
 
 const Home = () => {
+  /* It's emitting the user's email to the server and then listening for the response. */
   socket.emit("me", { me: store.getState().user.email })
   socket.on("data_workers", (data) => {
     console.log(data)
