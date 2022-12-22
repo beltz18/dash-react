@@ -20,12 +20,12 @@ const style = {
   p: 4,
 };
 
-function FormPay ({children}) {
+function FormPay () {
   const [open, setOpen] = useState(false)
   const handleOpen      = () => setOpen(true)
   const handleClose     = () => setOpen(false)
 
-  axios.get('http://localhost:5000/select/transactions')
+  axios.get(`${process.env.REACT_APP_ZORM+process.env.REACT_APP_SELECT_TRNS}`)
   .then((res) => {
     if (res.data) {
       const dataT = res.data
@@ -54,7 +54,7 @@ function FormPay ({children}) {
       asset:   asset.value,
       concept: concept.value
     }
-    axios.post("http://localhost:4000/register/payment", {transaction})
+    axios.post(`${process.env.REACT_APP_API_SERVER+process.env.REACT_APP_REGISTER_PAYMENT}`, {transaction})
     alert("Payment registered")
     handleClose()
   }

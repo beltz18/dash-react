@@ -17,7 +17,7 @@ const style = {
   p: 4,
 };
 
-function FormModal ({children}) {
+function FormModal () {
   const [open, setOpen] = useState(false)
   const handleOpen      = () => setOpen(true)
   const handleClose     = () => setOpen(false)

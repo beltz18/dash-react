@@ -40,7 +40,7 @@ function Navbar() {
     })
   }
   
-  axios.get('http://localhost:5000/select/transactions')
+  axios.get(`${process.env.REACT_APP_ZORM+process.env.REACT_APP_SELECT_TRANSACTION}`)
   .then((res) => {
     if (res.data) {
       const dataT = res.data

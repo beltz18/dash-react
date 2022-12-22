@@ -11,7 +11,7 @@ import {
   Delete
 } from '@mui/icons-material'
 
-const socket = io.connect("http://localhost:5300")
+const socket = io.connect(process.env.REACT_APP_API_SOCKETS)
 
 const columns = [
   { field: 'id',       headerName: 'ID',       width: 70  },

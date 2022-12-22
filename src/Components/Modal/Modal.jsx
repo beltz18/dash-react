@@ -21,15 +21,6 @@ const columns = [
   { field: 'createdAt', headerName: 'Date',           width: 150 },
 ]
 
-// const rows = [
-//   {id: 1, method: "PayPal", company: "Biz Rescue Pro",  amount: 3500,    asset: "CAD", concept: "Monthly", date: "11-04-2022"},
-//   {id: 2, method: "PayPal", company: "Amigo Workforce", amount: 3500,    asset: "CAD", concept: "Monthly", date: "11-04-2022"},
-//   {id: 3, method: "PayPal", company: "Amigo Workforce", amount: 3500,    asset: "USD", concept: "Monthly", date: "11-04-2022"},
-//   {id: 4, method: "PayPal", company: "Biz Rescue Pro",  amount: 3500,    asset: "CAD", concept: "Monthly", date: "11-04-2022"},
-//   {id: 5, method: "PayPal", company: "Biz Rescue Pro",  amount: 3500000, asset: "COP", concept: "Monthly", date: "11-04-2022"},
-//   {id: 6, method: "PayPal", company: "Biz Rescue Pro",  amount: 3500,    asset: "CAD", concept: "Monthly", date: "11-04-2022"},
-// ]
-
 function MyModal() {
   const [open, setOpen] = useState(false)
   const handleOpen      = () => setOpen(true)

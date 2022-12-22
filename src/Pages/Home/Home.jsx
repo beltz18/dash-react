@@ -1,6 +1,4 @@
 import '../../Styles/Home.css'
-import { useEffect }   from 'react'
-import axios           from 'axios'
 import io              from 'socket.io-client'
 import store           from '../../app/redux/store'
 import Sidebar         from '../../Components/Sidebar/Sidebar'
@@ -11,10 +9,9 @@ import Chart           from '../../Components/Chart/Chart'
 import Table           from '../../Components/Table/Table'
 import {
   setUsers,
-  setTransactions
 } from '../../app/redux/action'
 
-const socket = io.connect('http://localhost:5300/')
+const socket = io.connect(process.env.REACT_APP_API_SOCKETS)
 
 const Home = () => {
   /* It's emitting the user's email to the server and then listening for the response. */
@@ -35,6 +32,9 @@ const Home = () => {
           <Widget type="project" cypher="negative" />
           <Widget type="worker"  cypher="positive" />
         </div>
+        <span>
+          {process.env.REACT_APP_TESTS}
+        </span>
         <div className="charts">
           <Features />
           <Chart />

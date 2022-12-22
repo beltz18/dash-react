@@ -16,7 +16,7 @@ import {
   setUsers,
 } from '../../app/redux/action'
 
-const socket  = io.connect("http://localhost:5300/")
+const socket  = io.connect(process.env.REACT_APP_API_SOCKETS)
 const columns = [
   { field: 'id',       headerName: 'ID',       width: 70  },
   { field: 'name',     headerName: 'Fullname', width: 130 },
