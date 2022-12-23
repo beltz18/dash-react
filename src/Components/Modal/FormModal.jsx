@@ -5,6 +5,8 @@ import {
   Box,
   Backdrop
 } from "@mui/material"
+import passgen from 'human-password';
+import axios   from 'axios';
 
 const style = {
   position: 'absolute',
@@ -21,6 +23,26 @@ function FormModal () {
   const [open, setOpen] = useState(false)
   const handleOpen      = () => setOpen(true)
   const handleClose     = () => setOpen(false)
+  const handleSubmit    = (e) => {
+    e.preventDefault()
+    let new_user = {
+      name:     e.target[0].value,
+      email:    e.target[1].value,
+      salary:   e.target[2].value,
+      asset:    e.target[3].value,
+      pass:     passgen(),
+      provider: "Amigo Workforce"
+    }
+    console.log("password: "+new_user.pass)
+    axios.post(process.env.REACT_APP_API_SERVER+process.env.REACT_APP_REGISTER, new_user)
+      .then((result) => {
+        alert(result.data.user.message)
+      })
+      .catch((err) => {
+        console.log(err)
+        alert("Something went wrong, try again later")
+      })
+  }
 
   return (
     <div>
@@ -36,13 +58,13 @@ function FormModal () {
         }}
       >
         <Box sx={style}>
-          <form>
+          <form onSubmit={handleSubmit}>
             <h1>Register</h1>
             <input type="text" placeholder="Fullname" className="regForm" />
             <input type="text" placeholder="Email" className="regForm" />
             <input type="number" placeholder="Salary" className="regForm" />
             <input type="text" placeholder="Asset (example: 'CAD')" className="regForm" />
-            <input type="button" value="Register" className="regForm" />
+            <input type="submit" value="Register" className="regForm" />
           </form>
         </Box>
       </Modal>

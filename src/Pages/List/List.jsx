@@ -31,10 +31,18 @@ const columns = [
     }
   },
   { 
-    field: 'status',   headerName: 'Status',   width: 120,
+    field: 'status',   headerName: 'Connection',   width: 120,
     renderCell: (data) => {
       return (
         <span className={data.row.status}>{data.row.status}</span>
+      )
+    }
+  },
+  { 
+    field: 'accepted',   headerName: 'Status',   width: 120,
+    renderCell: (data) => {
+      return (
+        <span className={data.row.status}>Active</span>
       )
     }
   },
@@ -64,11 +72,12 @@ function List() {
   const [rows, setRows] = useState(store.getState().users)
 
   useEffect(() => {
-    socket.on("data_workers", (data) => {
-      store.dispatch(setUsers(data))
-      setRows(store.getState().users)
+    socket.on("data_workers", async (data) => {
+      await store.dispatch(setUsers(data))
+      setRows([...rows, data])
+      console.log(data)
     })
-  })
+  }, [rows])
 
   return (
     <div className="list">

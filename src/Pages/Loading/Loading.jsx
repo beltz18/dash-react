@@ -20,7 +20,7 @@ function Loading() {
 
   axios({
     method: "get",
-    url: `${process.env.REACT_APP_API_SERVER}/validate`,
+    url: `${process.env.REACT_APP_API_SERVER}validate`,
     headers: {
       "x-access-token": `bearer ${token}`
     }

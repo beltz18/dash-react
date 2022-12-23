@@ -18,7 +18,7 @@ form {
   margin-top: calc(var(--twenty) + var(--five));
 }
 
-.regForm[type=button] {
+.regForm[type=submit] {
   background: var(--blue);
   background: linear-gradient(90deg, var(--blue) var(--zero), var(--lightblue) var(--full));
   color: var(--white);
