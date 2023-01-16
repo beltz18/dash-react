@@ -11,6 +11,7 @@ import {
   Delete
 } from '@mui/icons-material'
 import { useEffect } from "react"
+import axios from "axios"
 
 const socket = io.connect(process.env.REACT_APP_API_SOCKETS)
 
@@ -53,32 +54,29 @@ const columns = [
   }
 ]
 
-let rows = [
-  {
-    id: 69,
-    name: 'Andi Montilla',
-    email: 'anmdev@gmail.com',
-    phone: '0412062508900',
-    age: '238',
-    gender: 'Male',
-    address: 'San Cristobal',
-    country: 'Deutschland',
-    city: 'Munich',
-    region: 'Munich',
-    pzcode: '123456',
-    job: 'IT consultor',
-    status: 'recently applied',
-    color: 'active'
-  }
-]
-
 function ListApplicant() {
-  let [data, setData] = useState(rows)
+  let [data, setData] = useState([])
 
   useEffect(() => {
-    socket.on("applicant", (appl) => {
-      setData([...data, appl])
-    })
+    axios.get(process.env.REACT_APP_API_SERVER+"get/applicants")
+      .then(data => {
+        let d = data.data
+        let e = []
+        let values = {}
+
+        d.forEach(element => {
+          values = {
+            id: element._id,
+            ...element
+          }
+          e.push(values)
+        })
+        console.log(e)
+        setData(e)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }, [data])
 
   return (
