@@ -4,7 +4,6 @@ import { Link }      from "react-router-dom"
 import Sidebar       from "../../Components/Sidebar/Sidebar"
 import Navbar        from "../../Components/Navbar/Navbar"
 import Datatable     from "../../Components/DataTable/Datatable"
-import io            from "socket.io-client"
 import {
   Create,
   Visibility,
@@ -12,8 +11,6 @@ import {
 } from '@mui/icons-material'
 import { useEffect } from "react"
 import axios from "axios"
-
-const socket = io.connect(process.env.REACT_APP_API_SOCKETS)
 
 const columns = [
   { field: 'id',       headerName: 'ID',       width: 70  },

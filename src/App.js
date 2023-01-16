@@ -16,6 +16,7 @@ import Single     from './Pages/Single/Single'
 import NotFound   from './Pages/404/NotFound'
 import Loading    from './Pages/Loading/Loading'
 import Payroll    from './Pages/Payroll/Payroll'
+import Tasks      from './Pages/Tasks/Tasks'
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
             <Route path='payroll'   element={ <Payroll />  } />
             <Route path='applicant' element={ <List2 />    } />
             <Route path='operation' element={ <List3 />    } />
+            <Route path='tasks'     element={ <Tasks />    } />
             <Route path='user'>
               <Route index          element={ <List />     } />
               <Route path=':sin'    element={ <Single />   } />

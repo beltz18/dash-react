@@ -1,0 +1,9 @@
+.tasks {
+  display: flex;
+  width: var(--full);
+}
+
+.tasks .tasksContainer {
+  flex: 10;
+  background-color: var(--light);
+}
